@@ -1,4 +1,6 @@
+import 'package:drone_website/features/website/screens/branded/branded_content.dart';
 import 'package:drone_website/features/website/screens/home/home_screen.dart';
+import 'package:drone_website/features/website/screens/photography/photography_screen.dart';
 import 'package:flutter/material.dart';
 
 class WebWebsiteLayout extends StatefulWidget {
@@ -17,29 +19,36 @@ class _WebWebsiteLayoutState extends State<WebWebsiteLayout> {
           appBar: AppBar(
             centerTitle: true,
             title: Container(
-              height: 70,
-              width: 80,
+              height: 80,
+              width: 90,
               decoration: const BoxDecoration(
-                  image: DecorationImage(image: AssetImage('images/nav.png'))),
+                  image: DecorationImage(
+                      image: AssetImage('images/pitayaja.png'))),
             ),
-            backgroundColor: Colors.grey.shade900,
-            bottom: const TabBar(tabs: [
-              Tab(
-                text: 'Home',
-                //icon: Icon(Icons.home),
-              ),
-              Tab(
-                text: 'Productions',
-                // icon: Icon(Icons.star),
-              ),
-              Tab(
-                text: 'Content',
-                // icon: Icon(Icons.person),
-              )
-            ]),
+            backgroundColor: Colors.black,
+            bottom: const TabBar(
+                labelStyle: TextStyle(fontWeight: FontWeight.w200),
+                tabs: [
+                  Tab(
+                    text: ' HOME',
+                    //icon: Icon(Icons.home),
+                  ),
+                  Tab(
+                    text: 'BRANDED CONTENT',
+                    // icon: Icon(Icons.star),
+                  ),
+                  Tab(
+                    text: 'PHOTOGRAPHY',
+                    // icon: Icon(Icons.person),
+                  )
+                ]),
           ),
           body: const TabBarView(
-            children: [HomeWebsiteScreen(), Text('Store'), Text('Production ')],
+            children: [
+              HomeWebsiteScreen(),
+              BrandedContent(),
+              PhotographyScreen()
+            ],
           ),
         ));
   }

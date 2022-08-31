@@ -1,4 +1,8 @@
 import 'package:drone_website/features/auth/auth_screen.dart';
+import 'package:drone_website/features/website/screens/branded/data/image_data.dart';
+import 'package:drone_website/features/website/screens/branded/widgets/bio_text.dart';
+import 'package:drone_website/features/website/screens/branded/widgets/duo_row.dart';
+import 'package:drone_website/features/website/screens/branded/widgets/image_cart.dart';
 import 'package:drone_website/features/website/screens/deals/deals_scree.dart';
 import 'package:drone_website/features/website/screens/footer/features.dart';
 import 'package:drone_website/features/website/screens/footer/footer.dart';
@@ -34,20 +38,20 @@ class _HomeWebsiteScreenState extends State<HomeWebsiteScreen> {
           title: Row(
             children: [
               Container(
-                height: 70,
-                width: 70,
+                height: 120,
+                width: 120,
                 decoration: const BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage('images/dronetre.jpg'))),
+                    image:
+                        DecorationImage(image: AssetImage('images/dro.png'))),
               ),
               const SizedBox(
-                width: 40,
+                width: 20,
               ),
               InkWell(
                 onTap: () =>
                     Navigator.pushNamed(context, GalleryScreen.routeName),
                 child: const Text(
-                  'Gallery',
+                  'REAL STATE',
                   style: TextStyle(fontSize: 15, color: Colors.white),
                 ),
               ),
@@ -58,7 +62,7 @@ class _HomeWebsiteScreenState extends State<HomeWebsiteScreen> {
                 onTap: () =>
                     Navigator.pushNamed(context, ServiciosScreen.routeName),
                 child: const Text(
-                  'Services',
+                  'ENTERPRISE',
                   style: TextStyle(fontSize: 15, color: Colors.white),
                 ),
               ),
@@ -69,21 +73,21 @@ class _HomeWebsiteScreenState extends State<HomeWebsiteScreen> {
                 onTap: () =>
                     Navigator.pushNamed(context, TeamsScreen.routeName),
                 child: const Text(
-                  'Teams',
+                  'STORY',
                   style: TextStyle(fontSize: 15, color: Colors.white),
                 ),
               ),
-              const SizedBox(
-                width: 15,
-              ),
-              InkWell(
-                onTap: () =>
-                    Navigator.pushNamed(context, DealsScreen.routeName),
-                child: const Text(
-                  'Deals',
-                  style: TextStyle(fontSize: 15, color: Colors.white),
-                ),
-              ),
+              // const SizedBox(
+              //   width: 15,
+              // ),
+              // // InkWell(
+              // //   onTap: () =>
+              // //       Navigator.pushNamed(context, DealsScreen.routeName),
+              // //   child: const Text(
+              // //     'STORE',
+              // //     style: TextStyle(fontSize: 15, color: Colors.white),
+              // //   ),
+              // // ),
               const SizedBox(
                 width: 15,
               ),
@@ -91,7 +95,7 @@ class _HomeWebsiteScreenState extends State<HomeWebsiteScreen> {
                 onTap: () =>
                     Navigator.pushNamed(context, StoreScreen.routeName),
                 child: const Text(
-                  'Story',
+                  'VIDEOCLIPS',
                   style: TextStyle(fontSize: 15, color: Colors.white),
                 ),
               ),
@@ -102,7 +106,7 @@ class _HomeWebsiteScreenState extends State<HomeWebsiteScreen> {
                 onTap: () =>
                     Navigator.pushNamed(context, SocialMediaScreen.routeName),
                 child: const Text(
-                  'Social Media',
+                  'FAQ ',
                   style: TextStyle(fontSize: 15, color: Colors.white),
                 ),
               ),
@@ -135,68 +139,88 @@ class _HomeWebsiteScreenState extends State<HomeWebsiteScreen> {
               ],
             )
           ],
-          backgroundColor: Colors.grey.shade900,
+          backgroundColor: Colors.black,
         ),
       ),
-      //////////////////////////////////////////////////////////////////////////////////////////////// body
+      //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+      ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// body
       body: SingleChildScrollView(
         child: Column(
           children: [
             Stack(children: [
               const Center(
-                child: Image(image: AssetImage('images/one.jpg')),
+                child: Image(image: AssetImage('images/uno.jpg')),
               ),
               Padding(
                 padding: const EdgeInsets.all(20.0),
-                child: AnimatedTextKit(repeatForever: true, animatedTexts: [
-                  // FadeAnimatedText('Welcome Back ...!',
-                  //     textStyle: TextStyle(
-                  //         color: Colors.black,
-                  //         fontSize: 50,
-                  //         fontWeight: FontWeight.bold)),
-                  TypewriterAnimatedText(
-                      'Enjoy next-level comfort and convenience with DJI Goggles 2. ',
-                      textStyle: const TextStyle(
-                          color: Colors.black,
-                          fontSize: 50,
-                          fontWeight: FontWeight.bold)),
-                  TypewriterAnimatedText(
-                      'its design was made for you to be bold.',
-                      textStyle: const TextStyle(
-                          color: Colors.black,
-                          fontSize: 50,
-                          fontWeight: FontWeight.bold)),
-                  RotateAnimatedText('PITAJAYA DRONE STUDIO',
-                      textStyle: const TextStyle(
-                        fontFamily: 'Roboto',
-                        color: Colors.black,
-                        fontSize: 70,
-                        fontWeight: FontWeight.w200,
-                      )),
-                  TypewriterAnimatedText('Scroll down to learn more...',
-                      textStyle: const TextStyle(
-                          color: Colors.black,
-                          fontSize: 50,
-                          fontWeight: FontWeight.bold))
-                ]),
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: Colors.black,
+                      borderRadius: BorderRadius.circular(16)),
+                  child: AnimatedTextKit(repeatForever: true, animatedTexts: [
+                    TypewriterAnimatedText(
+                        'Enjoy next-level comfort and convenience with DJI Goggles 2. ',
+                        textStyle: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 50,
+                            fontWeight: FontWeight.bold)),
+                    TypewriterAnimatedText(
+                        'its design was made for you to be bold.',
+                        textStyle: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 50,
+                            fontWeight: FontWeight.bold)),
+                    TypewriterAnimatedText('PITAJAYA DRONE STUDIOS...',
+                        textStyle: const TextStyle(
+                            color: Colors.white,
+                            //Color.fromARGB(255, 255, 182, 11),
+                            fontSize: 50,
+                            fontWeight: FontWeight.bold))
+                  ]),
+                ),
               ),
             ]),
             const SizedBox(
+              height: 30,
+            ),
+            Container(
+              height: 100,
+              color: Colors.black,
+              child: const Center(
+                  child: Text(
+                'Explore our Different Types of Services! ',
+                style: TextStyle(fontSize: 50),
+              )),
+            ),
+            BioText(),
+            CarouselSliderWidget(),
+            Container(
+              height: 50,
+              color: Colors.black,
+            ),
+            BioText(),
+            CarouselSliderWidget(),
+            Container(
+              height: 50,
+              color: Colors.black,
+            ),
+            BioText(),
+            CarouselSliderWidget(),
+            SizedBox(
               height: 10,
             ),
-            CarouselSliderWidget(),
             Container(
               height: 30,
               color: Colors.black,
             ),
             const SizedBox(
-              height: 10,
+              height: 30,
             ),
-            ServicesWidget(),
+            const ServicesWidget(),
             const SizedBox(
               height: 5,
             ),
-            FeaturesWidget(),
+            const FeaturesWidget(),
             const SizedBox(
               height: 10,
             ),

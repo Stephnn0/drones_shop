@@ -72,8 +72,7 @@ class ServicesWidget extends StatelessWidget {
                   decoration: BoxDecoration(
                       image: DecorationImage(
                           fit: BoxFit.cover,
-                          image: NetworkImage(
-                              'https://cdn.pixabay.com/photo/2016/11/29/02/59/drone-1866961_960_720.jpg'))),
+                          image: AssetImage('images/wall1.jpg'))),
                 ),
                 const SizedBox(
                   width: 10,

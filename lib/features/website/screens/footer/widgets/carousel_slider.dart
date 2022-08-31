@@ -12,10 +12,10 @@ class _CarouselSliderWidgetState extends State<CarouselSliderWidget> {
   int _current = 0;
 
   final List<String> images = [
-    'assets/images/two.jpg',
-    'assets/images/tre.jpg',
-    'assets/images/four.jpg',
-    'assets/images/five.jpg',
+    'assets/images/casa.jpg',
+    'assets/images/res.jpg',
+    'assets/images/panecillo.jpg',
+    'assets/images/lui.jpg',
   ];
 
   final List<String> sentences = [
