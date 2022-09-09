@@ -1,5 +1,5 @@
 import 'package:drone_website/features/website/screens/branded/branded_content.dart';
-import 'package:drone_website/features/website/screens/gallery/gallery_screen.dart';
+import 'package:drone_website/features/website/screens/real_state/gallery_screen.dart';
 import 'package:drone_website/features/website/screens/home/home_screen.dart';
 import 'package:drone_website/features/website/screens/photography/photography_screen.dart';
 import 'package:drone_website/features/website/widgets/coming_up.dart';

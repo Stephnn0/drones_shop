@@ -1,11 +1,11 @@
 {
-    "name": "drone_website",
-    "short_name": "drone_website",
+    "name": "Pitajaya Drone Studios",
+    "short_name": "Pitajaya Drone Studios",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "Aerial photography and video drone services",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

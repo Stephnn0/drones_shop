@@ -38,7 +38,7 @@ class PhotographyScreen extends StatelessWidget {
                   repeatForever: false,
                   animatedTexts: [
                     TypewriterAnimatedText(
-                        '               CONTACT US              EXCLUSIVE AERIAL MEDIA SERVICES               786 315 7771                PITAJAYADRONES@GMAIL.COM                  MIAMI | ECUADOR         ',
+                        '         GET IN TOUCH           SOCIAL MEDIA OR CONTACT INFORMATION               786 315 7771                PITAJAYADRONES@GMAIL.COM                  MIAMI | ECUADOR         ',
                         textStyle: TextStyle(
                             color: Colors.black,
                             fontSize: 20,

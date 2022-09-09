@@ -1,20 +1,8 @@
 import 'package:drone_website/features/auth/auth_screen.dart';
-import 'package:drone_website/features/website/screens/branded/data/image_data.dart';
 import 'package:drone_website/features/website/screens/branded/widgets/bio_text.dart';
-import 'package:drone_website/features/website/screens/branded/widgets/duo_row.dart';
-import 'package:drone_website/features/website/screens/branded/widgets/image_cart.dart';
-import 'package:drone_website/features/website/screens/deals/deals_scree.dart';
 import 'package:drone_website/features/website/screens/footer/features.dart';
 import 'package:drone_website/features/website/screens/footer/footer.dart';
-import 'package:drone_website/features/website/screens/footer/services.dart';
 import 'package:drone_website/features/website/screens/footer/widgets/carousel_slider.dart';
-import 'package:drone_website/features/website/screens/gallery/gallery_screen.dart';
-import 'package:drone_website/features/website/screens/gallery/widgets/image_stack.dart';
-import 'package:drone_website/features/website/screens/servicios/servicios_screen.dart';
-import 'package:drone_website/features/website/screens/socialMedia/social_media_screen.dart';
-import 'package:drone_website/features/website/screens/store/store_screen.dart';
-import 'package:drone_website/features/website/screens/teams/teams_screen.dart';
-import 'package:drone_website/features/website/widgets/contact_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 
@@ -40,88 +28,26 @@ class _HomeWebsiteScreenState extends State<HomeWebsiteScreen> {
         child: AppBar(
           automaticallyImplyLeading: false,
           centerTitle: false,
-          title: Row(
-            children: [
-              const SizedBox(
-                width: 25,
-              ),
-              InkWell(
-                onTap: () =>
-                    Navigator.pushNamed(context, TeamsScreen.routeName),
-                child: Row(
-                  children: const [
-                    Icon(Icons.album_outlined),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text(
-                      'STORY',
-                      style: TextStyle(fontSize: 15, color: Colors.white),
-                    ),
-                  ],
-                ),
-              ),
-              const SizedBox(
-                width: 15,
-              ),
-              InkWell(
-                onTap: () =>
-                    Navigator.pushNamed(context, SocialMediaScreen.routeName),
-                child: Row(
-                  children: const [
-                    Icon(Icons.album_outlined),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text(
-                      'FAQ',
-                      style: TextStyle(fontSize: 15, color: Colors.white),
-                    ),
-                  ],
-                ),
-              ),
-              const SizedBox(
-                width: 15,
-              ),
-              InkWell(
-                onTap: () =>
-                    Navigator.pushNamed(context, SocialMediaScreen.routeName),
-                child: Row(
-                  children: const [
-                    Icon(Icons.album_outlined),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text(
-                      'ABOUT',
-                      style: TextStyle(fontSize: 15, color: Colors.white),
-                    ),
-                  ],
-                ),
-              ),
-              const SizedBox(
-                width: 15,
-              ),
-              InkWell(
-                onTap: () =>
-                    Navigator.pushNamed(context, SocialMediaScreen.routeName),
-                child: Row(
-                  children: const [
-                    Icon(Icons.album_outlined),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text(
-                      'FEATURES',
-                      style: TextStyle(fontSize: 15, color: Colors.white),
-                    ),
-                  ],
-                ),
-              ),
-              const SizedBox(
-                width: 15,
-              ),
-            ],
+          title: Container(
+            height: 25,
+            decoration: BoxDecoration(
+              // color: Colors.grey.shade300,
+              color: Colors.white,
+              // Colors.grey.shade300,
+
+              borderRadius: BorderRadius.circular(5),
+            ),
+            child: AnimatedTextKit(
+                totalRepeatCount: 1,
+                repeatForever: false,
+                animatedTexts: [
+                  TypewriterAnimatedText(
+                      ' PITAJAYA DRONE STUDIOS            EXCLUSIVE MEDIA SERVICES           VIDEO & PHOTOGRAPHY PRODUCTIONS             REAL ESTATE AERIAL PROJECTS                    ',
+                      textStyle: const TextStyle(
+                          color: Colors.black,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold)),
+                ]),
           ),
           elevation: 0,
           actions: [
@@ -131,25 +57,25 @@ class _HomeWebsiteScreenState extends State<HomeWebsiteScreen> {
                   onTap: () =>
                       Navigator.pushNamed(context, AuthScreen.routeName),
                   child: const Icon(
-                    Icons.person,
+                    Icons.shopping_cart,
                     color: Colors.white,
-                    size: 20,
+                    size: 30,
                   ),
                 ),
                 const SizedBox(
-                  width: 25,
+                  width: 15,
                 ),
                 InkWell(
                   onTap: () =>
                       Navigator.pushNamed(context, AuthScreen.routeName),
                   child: const Icon(
-                    Icons.shopping_cart,
+                    Icons.contact_support_outlined,
                     color: Colors.white,
-                    size: 20,
+                    size: 30,
                   ),
                 ),
                 const SizedBox(
-                  width: 25,
+                  width: 15,
                 ),
               ],
             )

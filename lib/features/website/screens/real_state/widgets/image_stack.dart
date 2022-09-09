@@ -1,25 +1,30 @@
 import 'package:flutter/material.dart';
 
 class ImageStack extends StatelessWidget {
-  ImageStack({Key? key}) : super(key: key);
+  final String image;
+  final String title;
+  final String subtitle;
 
-  final List<String> images = [
-    'assets/images/casa.jpg',
-  ];
+  ImageStack(
+      {Key? key,
+      required this.image,
+      required this.subtitle,
+      required this.title})
+      : super(key: key);
+
+  // final List<String> images = [
+  //   'assets/images/casa.jpg',
+  // ];
 
   @override
   Widget build(BuildContext context) {
-    return
-        //  Container(
-        //   child:
-
-        Stack(
-            alignment: Alignment.center,
-            ///////
-            fit: StackFit.loose,
-            children: [
+    return Stack(
+        alignment: Alignment.center,
+        ///////
+        fit: StackFit.loose,
+        children: [
           Center(
-            child: Image(image: AssetImage(images[0])),
+            child: Image(image: AssetImage(image)),
           ),
 
           Row(
@@ -57,17 +62,17 @@ class ImageStack extends StatelessWidget {
                         color: Colors.white,
                       ),
                     ),
-                    const Text(
-                      'REAL ESTATE',
-                      style: TextStyle(
+                    Text(
+                      title,
+                      style: const TextStyle(
                         fontSize: 60,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
                       ),
                     ),
-                    const Text(
-                      'PHOTOGRAPHY PRODUCTIONS',
-                      style: TextStyle(
+                    Text(
+                      subtitle,
+                      style: const TextStyle(
                         fontSize: 60,
                         color: Colors.white,
                       ),
@@ -111,7 +116,7 @@ class ImageStack extends StatelessWidget {
           )
           //  ),
         ]
-            // ),
-            );
+        // ),
+        );
   }
 }

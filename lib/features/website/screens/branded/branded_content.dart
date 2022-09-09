@@ -4,13 +4,15 @@ import 'package:drone_website/features/website/screens/branded/widgets/multiple_
 import 'package:drone_website/features/website/screens/branded/widgets/work_experience.dart';
 import 'package:drone_website/features/website/screens/footer/features.dart';
 import 'package:drone_website/features/website/screens/footer/footer.dart';
-import 'package:drone_website/features/website/screens/socialMedia/social_media_screen.dart';
-import 'package:drone_website/features/website/screens/teams/teams_screen.dart';
-import 'package:drone_website/features/website/widgets/contact_widget.dart';
+import 'package:drone_website/features/website/screens/real_state/widgets/image_stack.dart';
 import 'package:flutter/material.dart';
 
 class BrandedContent extends StatelessWidget {
-  const BrandedContent({Key? key}) : super(key: key);
+  BrandedContent({Key? key}) : super(key: key);
+
+  final List<String> images = [
+    'assets/images/res.jpg',
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -40,8 +42,8 @@ class BrandedContent extends StatelessWidget {
                 repeatForever: false,
                 animatedTexts: [
                   TypewriterAnimatedText(
-                      '               CONTACT US              EXCLUSIVE AERIAL MEDIA SERVICES               786 315 7771                PITAJAYADRONES@GMAIL.COM                  MIAMI | ECUADOR         ',
-                      textStyle: TextStyle(
+                      '         GET IN TOUCH           SOCIAL MEDIA OR CONTACT INFORMATION               786 315 7771                PITAJAYADRONES@GMAIL.COM                  MIAMI | ECUADOR         ',
+                      textStyle: const TextStyle(
                           color: Colors.black,
                           fontSize: 20,
                           fontWeight: FontWeight.bold)),
@@ -61,91 +63,6 @@ class BrandedContent extends StatelessWidget {
           ],
           backgroundColor: Colors.black,
           elevation: 0,
-          // title: Row(
-          //   children: [
-          //     const SizedBox(
-          //       width: 25,
-          //     ),
-          //     InkWell(
-          //       onTap: () =>
-          //           Navigator.pushNamed(context, TeamsScreen.routeName),
-          //       child: Row(
-          //         children: [
-          //           Icon(
-          //             Icons.album_outlined,
-          //           ),
-          //           SizedBox(
-          //             width: 10,
-          //           ),
-          //           Text(
-          //             'STORY',
-          //             style: TextStyle(fontSize: 15, color: Colors.white),
-          //           ),
-          //         ],
-          //       ),
-          //     ),
-          //     const SizedBox(
-          //       width: 15,
-          //     ),
-          //     InkWell(
-          //       onTap: () =>
-          //           Navigator.pushNamed(context, SocialMediaScreen.routeName),
-          //       child: Row(
-          //         children: [
-          //           Icon(Icons.album_outlined),
-          //           SizedBox(
-          //             width: 10,
-          //           ),
-          //           Text(
-          //             'FAQ',
-          //             style: TextStyle(fontSize: 15, color: Colors.white),
-          //           ),
-          //         ],
-          //       ),
-          //     ),
-          //     const SizedBox(
-          //       width: 15,
-          //     ),
-          //     InkWell(
-          //       onTap: () =>
-          //           Navigator.pushNamed(context, SocialMediaScreen.routeName),
-          //       child: Row(
-          //         children: [
-          //           Icon(Icons.album_outlined),
-          //           SizedBox(
-          //             width: 10,
-          //           ),
-          //           Text(
-          //             'ABOUT',
-          //             style: TextStyle(fontSize: 15, color: Colors.white),
-          //           ),
-          //         ],
-          //       ),
-          //     ),
-          //     const SizedBox(
-          //       width: 15,
-          //     ),
-          //     InkWell(
-          //       onTap: () =>
-          //           Navigator.pushNamed(context, SocialMediaScreen.routeName),
-          //       child: Row(
-          //         children: [
-          //           Icon(Icons.album_outlined),
-          //           SizedBox(
-          //             width: 10,
-          //           ),
-          //           Text(
-          //             'RESOURCES',
-          //             style: TextStyle(fontSize: 15, color: Colors.white),
-          //           ),
-          //         ],
-          //       ),
-          //     ),
-          //     const SizedBox(
-          //       width: 15,
-          //     ),
-          //   ],
-          // ),
         ),
         backgroundColor: Colors.white,
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -153,13 +70,17 @@ class BrandedContent extends StatelessWidget {
           child: Column(
             children: [
               ////////////////////////////////////////////////////////////////////////////////////////////////////////
-              Center(
-                child: Container(
-                    width: double.infinity,
-                    child: const Image(
-                        fit: BoxFit.cover,
-                        image: AssetImage('images/res.jpg'))),
-              ),
+              // Center(
+              //   child: Container(
+              //       width: double.infinity,
+              //       child: const Image(
+              //           fit: BoxFit.cover,
+              //           image: AssetImage('images/res.jpg'))),
+              // ),
+              ImageStack(
+                  image: images[0],
+                  subtitle: " REAL TIME PROJECT PRODUCTIONS",
+                  title: "BRANDED CONTENT"),
               ////////////////////////////////////////////////////////////////////////////////////////////////////////
               const SizedBox(
                 height: 10,

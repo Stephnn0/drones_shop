@@ -44,7 +44,7 @@ class _MyAppState extends State<MyApp> {
           ),
         ),
         debugShowCheckedModeBanner: false,
-        title: 'Pitajaya Drones',
+        title: 'Pitajaya Drone Studios',
         onGenerateRoute: (settings) => generateRoute(settings),
 
         // theme: //ThemeData.dark().copyWith(scaffoldBackgroundColor: backgroundColor),

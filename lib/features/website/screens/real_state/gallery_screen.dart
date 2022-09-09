@@ -1,12 +1,10 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:drone_website/features/website/screens/branded/widgets/bio_text.dart';
-import 'package:drone_website/features/website/screens/branded/widgets/duo_row.dart';
 import 'package:drone_website/features/website/screens/branded/widgets/multiple_container.dart';
 import 'package:drone_website/features/website/screens/footer/features.dart';
 import 'package:drone_website/features/website/screens/footer/footer.dart';
-import 'package:drone_website/features/website/screens/footer/widgets/carousel_slider.dart';
-import 'package:drone_website/features/website/screens/gallery/widgets/image_stack.dart';
-import 'package:drone_website/features/website/screens/gallery/widgets/realstate_cart.dart';
+import 'package:drone_website/features/website/screens/real_state/widgets/image_stack.dart';
+import 'package:drone_website/features/website/screens/real_state/widgets/realstate_cart.dart';
 import 'package:drone_website/features/website/screens/home/widgets/scroll_view_body.dart';
 import 'package:drone_website/features/website/widgets/contact_widget.dart';
 import 'package:flutter/material.dart';
@@ -20,6 +18,7 @@ class GalleryScreen extends StatelessWidget {
   final List<String> images = [
     'assets/images/youtub(1).png',
     'assets/images/isss(1).png',
+    'assets/images/casa.jpg',
   ];
 
   @override
@@ -61,7 +60,7 @@ class GalleryScreen extends StatelessWidget {
               repeatForever: false,
               animatedTexts: [
                 TypewriterAnimatedText(
-                    '               CONTACT US              EXCLUSIVE AERIAL MEDIA SERVICES               786 315 7771                PITAJAYADRONES@GMAIL.COM                  MIAMI | ECUADOR         ',
+                    '         GET IN TOUCH           SOCIAL MEDIA OR CONTACT INFORMATION               786 315 7771                PITAJAYADRONES@GMAIL.COM                  MIAMI | ECUADOR         ',
                     textStyle: TextStyle(
                         color: Colors.black,
                         fontSize: 20,
@@ -80,7 +79,11 @@ class GalleryScreen extends StatelessWidget {
           child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          ImageStack(),
+          ImageStack(
+            image: images[2],
+            title: "REAL ESTATE",
+            subtitle: "PHOTOGRAPHY PRODUCTIONS",
+          ),
           BioText(
             color: Colors.grey.shade700,
           ),
