@@ -1,4 +1,7 @@
 import 'package:drone_website/constants/colors.dart';
+import 'package:drone_website/features/website/phone_screens/about/about_view.dart';
+import 'package:drone_website/features/website/phone_screens/home/home_view.dart';
+import 'package:drone_website/features/website/widgets/contact_widget.dart';
 import 'package:flutter/material.dart';
 
 class MobileWebsiteLayout extends StatefulWidget {
@@ -11,6 +14,16 @@ class MobileWebsiteLayout extends StatefulWidget {
 class _MobileWebsiteLayoutState extends State<MobileWebsiteLayout> {
   final List<String> images = [
     'assets/images/pitayaja.png',
+  ];
+
+  int currentIndex = 0;
+
+  final screens = [
+    HomeView(),
+    AboutView(),
+    AboutView(),
+    AboutView(),
+    AboutView()
   ];
   @override
   Widget build(BuildContext context) {
@@ -26,25 +39,11 @@ class _MobileWebsiteLayoutState extends State<MobileWebsiteLayout> {
         ),
         centerTitle: true,
       ),
-      body: Center(
-          child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Icon(
-            Icons.construction,
-            color: Colors.white,
-            size: 80,
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Text(
-            'Mobile Version Comming soon',
-            style: TextStyle(color: Colors.white, fontSize: 20),
-          ),
-        ],
-      )),
+      body: screens[currentIndex],
       bottomNavigationBar: BottomNavigationBar(
+          iconSize: 30,
+          onTap: (index) => setState(() => currentIndex = index),
+          currentIndex: currentIndex,
           type: BottomNavigationBarType.fixed,
           backgroundColor: Colors.black,
           items: const [
@@ -55,26 +54,26 @@ class _MobileWebsiteLayoutState extends State<MobileWebsiteLayout> {
                 label: ''),
             BottomNavigationBarItem(
               icon: Icon(
-                Icons.camera_alt_outlined,
+                Icons.facebook_outlined,
                 color: Colors.white,
               ),
               label: '',
             ),
             BottomNavigationBarItem(
                 icon: Icon(
-                  Icons.camera_alt_outlined,
+                  Icons.info,
                   color: Colors.white,
                 ),
                 label: ''),
             BottomNavigationBarItem(
                 icon: Icon(
-                  Icons.camera_alt_outlined,
+                  Icons.messenger_outline_sharp,
                   color: Colors.white,
                 ),
                 label: ''),
             BottomNavigationBarItem(
                 icon: Icon(
-                  Icons.camera_alt_outlined,
+                  Icons.person,
                   color: Colors.white,
                 ),
                 label: '')

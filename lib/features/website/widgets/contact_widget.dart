@@ -27,10 +27,10 @@ class ContactWidget extends StatelessWidget {
               height: 50,
             ),
             TextField(
+              style: TextStyle(color: Colors.white),
               decoration: InputDecoration(
                   hintStyle: TextStyle(color: Colors.white),
                   filled: true,
-                  fillColor: Colors.black,
                   labelText: "Name",
                   labelStyle: TextStyle(color: Colors.grey.shade700),
                   enabledBorder: OutlineInputBorder(
@@ -42,11 +42,10 @@ class ContactWidget extends StatelessWidget {
               height: 10,
             ),
             TextField(
-              // style: TextStyle(color: Colors.white),
+              style: TextStyle(color: Colors.white),
               decoration: InputDecoration(
                   filled: true,
                   hintStyle: TextStyle(color: Colors.white),
-                  fillColor: Colors.black,
                   labelText: "Email",
                   labelStyle: TextStyle(color: Colors.grey.shade700),
                   enabledBorder: OutlineInputBorder(
@@ -62,7 +61,6 @@ class ContactWidget extends StatelessWidget {
               decoration: InputDecoration(
                   filled: true,
                   hintStyle: TextStyle(color: Colors.white),
-                  fillColor: Colors.black,
                   labelText: "Subject",
                   labelStyle: TextStyle(color: Colors.grey.shade700),
                   enabledBorder: OutlineInputBorder(
@@ -74,6 +72,7 @@ class ContactWidget extends StatelessWidget {
               height: 10,
             ),
             TextFormField(
+              style: TextStyle(color: Colors.white),
               minLines: 2,
               maxLines: 7,
               keyboardType: TextInputType.multiline,
@@ -83,7 +82,6 @@ class ContactWidget extends StatelessWidget {
                     borderSide: BorderSide(color: Colors.white, width: 0.0),
                   ),
                   filled: true,
-                  fillColor: Colors.black,
                   labelText: "Message",
                   border: OutlineInputBorder()),
             ),
