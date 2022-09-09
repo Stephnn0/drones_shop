@@ -7,6 +7,8 @@ import 'package:drone_website/features/website/screens/footer/footer.dart';
 import 'package:drone_website/features/website/screens/footer/widgets/carousel_slider.dart';
 import 'package:drone_website/features/website/screens/gallery/widgets/image_stack.dart';
 import 'package:drone_website/features/website/screens/gallery/widgets/realstate_cart.dart';
+import 'package:drone_website/features/website/screens/home/widgets/scroll_view_body.dart';
+import 'package:drone_website/features/website/widgets/contact_widget.dart';
 import 'package:flutter/material.dart';
 
 class GalleryScreen extends StatelessWidget {
@@ -19,31 +21,70 @@ class GalleryScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        actions: [
-          Container(
-            height: 100,
-            width: 100,
+        leading: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Container(
+            height: 50,
+            width: 50,
             decoration: const BoxDecoration(
                 image:
-                    DecorationImage(image: AssetImage('images/pitayaja.png'))),
+                    DecorationImage(image: AssetImage('images/youtub(1).png'))),
+          ),
+        ),
+
+        actions: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              height: 50,
+              width: 50,
+              decoration: const BoxDecoration(
+                  image:
+                      DecorationImage(image: AssetImage('images/isss(1).png'))),
+            ),
           ),
         ],
-        title: Text('PITAJAYA DRONE STUDIOS'),
+        title: Container(
+          height: 25,
+          decoration: BoxDecoration(
+            // color: Colors.grey.shade300,
+            color: Colors.white,
+            // Colors.grey.shade300,
+
+            borderRadius: BorderRadius.circular(5),
+          ),
+          child: AnimatedTextKit(
+              totalRepeatCount: 1,
+              repeatForever: false,
+              animatedTexts: [
+                TypewriterAnimatedText(
+                    '               CONTACT US              EXCLUSIVE AERIAL MEDIA SERVICES               786 315 7771                PITAJAYADRONES@GMAIL.COM                  MIAMI | ECUADOR         ',
+                    textStyle: TextStyle(
+                        color: Colors.black,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold)),
+              ]),
+        ),
+
+        //  const Text('PITAJAYA DRONE STUDIOS'),
         automaticallyImplyLeading: true,
         backgroundColor: Colors.black,
       ),
-      backgroundColor: Colors.grey.shade200,
+      backgroundColor: Colors.black,
+      // Colors.grey.shade200,
       ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
       body: SingleChildScrollView(
           child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           const ImageStack(),
-          BioText(),
-          SizedBox(
+          BioText(
+            color: Colors.grey.shade700,
+          ),
+          const SizedBox(
             height: 10,
           ),
-          MultipleContainer(
+          const MultipleContainer(
             titlecolor: Colors.white,
             iconcolor: Colors.white,
             icon: Icons.home,
@@ -55,7 +96,7 @@ class GalleryScreen extends StatelessWidget {
             color3: Colors.black,
             colordescription: Colors.white,
           ),
-          MultipleContainer(
+          const MultipleContainer(
             titlecolor: Colors.black,
             iconcolor: Colors.black,
             icon: Icons.construction,
@@ -67,13 +108,13 @@ class GalleryScreen extends StatelessWidget {
             color3: Colors.white,
             colordescription: Colors.black,
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
-          MultipleContainer(
+          const MultipleContainer(
             titlecolor: Colors.white,
             iconcolor: Colors.white,
             icon: Icons.home,
@@ -85,7 +126,7 @@ class GalleryScreen extends StatelessWidget {
             color3: Colors.black,
             colordescription: Colors.white,
           ),
-          MultipleContainer(
+          const MultipleContainer(
             titlecolor: Colors.black,
             iconcolor: Colors.black,
             icon: Icons.construction,
@@ -97,7 +138,7 @@ class GalleryScreen extends StatelessWidget {
             color3: Colors.white,
             colordescription: Colors.black,
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Container(
@@ -113,8 +154,9 @@ class GalleryScreen extends StatelessWidget {
             )),
           ),
           Padding(
+            //
             padding: const EdgeInsets.symmetric(horizontal: 100, vertical: 20),
-            child: Container(
+            child: SizedBox(
               height: 500,
               child: ListView(
                 scrollDirection: Axis.horizontal,
@@ -146,7 +188,7 @@ class GalleryScreen extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 100, vertical: 20),
-            child: Container(
+            child: SizedBox(
               height: 500,
               child: ListView(
                 scrollDirection: Axis.horizontal,
@@ -209,13 +251,30 @@ class GalleryScreen extends StatelessWidget {
             ),
           ),
           const SizedBox(
-            height: 30,
+            height: 60,
+          ),
+          Container(
+            height: 100,
+            color: Colors.grey.shade200,
+            child: const Center(
+                child: Text(
+              "CONTACT US! ",
+              style: TextStyle(
+                  fontSize: 50,
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold),
+            )),
           ),
           const SizedBox(
-            height: 30,
+            height: 60,
           ),
-          FeaturesWidget(),
-          FooterWidget()
+          const ContactWidget(),
+          const SizedBox(
+            height: 100,
+          ),
+          const ScrollViewBody(),
+          const FeaturesWidget(),
+          const FooterWidget()
         ],
       )),
     );

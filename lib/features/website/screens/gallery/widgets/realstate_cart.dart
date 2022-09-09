@@ -22,7 +22,7 @@ class RealStateCart extends StatelessWidget {
       margin: const EdgeInsets.all(8),
       decoration: BoxDecoration(
           color: Colors.black,
-          border: Border.all(color: Colors.grey.shade800, width: 2.0),
+          border: Border.all(color: Colors.grey.shade700, width: 2.0),
           //color: Colors.grey.shade500,
           borderRadius: BorderRadius.circular(8)),
       child: Column(
@@ -45,7 +45,7 @@ class RealStateCart extends StatelessWidget {
           RichText(
               text: TextSpan(
                   text: description,
-                  style: const TextStyle(color: Colors.white))),
+                  style: TextStyle(color: Colors.grey.shade700))),
           const SizedBox(
             height: 30,
           ),
@@ -55,13 +55,16 @@ class RealStateCart extends StatelessWidget {
               height: 40,
               width: 200,
               decoration: BoxDecoration(
+                border: Border.all(color: Colors.white),
                 borderRadius: BorderRadius.circular(8),
-                color: Colors.blue,
+                // borderRadius: BorderRadius.circular(8),
+                color: Colors.black,
               ),
-              child: const Center(
+              child: Center(
                   child: Text(
                 'Learn more about it',
-                style: TextStyle(fontWeight: FontWeight.bold),
+                style:
+                    TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
               )),
             ),
           ),

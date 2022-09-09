@@ -1,11 +1,12 @@
-import 'package:drone_website/features/website/screens/branded/data/image_data.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:drone_website/features/website/screens/branded/widgets/bio_text.dart';
-import 'package:drone_website/features/website/screens/branded/widgets/duo_row.dart';
-import 'package:drone_website/features/website/screens/branded/widgets/image_cart.dart';
 import 'package:drone_website/features/website/screens/branded/widgets/multiple_container.dart';
 import 'package:drone_website/features/website/screens/branded/widgets/work_experience.dart';
 import 'package:drone_website/features/website/screens/footer/features.dart';
 import 'package:drone_website/features/website/screens/footer/footer.dart';
+import 'package:drone_website/features/website/screens/socialMedia/social_media_screen.dart';
+import 'package:drone_website/features/website/screens/teams/teams_screen.dart';
+import 'package:drone_website/features/website/widgets/contact_widget.dart';
 import 'package:flutter/material.dart';
 
 class BrandedContent extends StatelessWidget {
@@ -14,7 +15,140 @@ class BrandedContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        appBar: AppBar(
+          leading: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              height: 50,
+              width: 50,
+              decoration: const BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage('images/youtub(1).png'))),
+            ),
+          ),
+          title: Container(
+            height: 25,
+            decoration: BoxDecoration(
+              // color: Colors.grey.shade300,
+              color: Colors.white,
+              // Colors.grey.shade300,
+
+              borderRadius: BorderRadius.circular(5),
+            ),
+            child: AnimatedTextKit(
+                totalRepeatCount: 1,
+                repeatForever: false,
+                animatedTexts: [
+                  TypewriterAnimatedText(
+                      '               CONTACT US              EXCLUSIVE AERIAL MEDIA SERVICES               786 315 7771                PITAJAYADRONES@GMAIL.COM                  MIAMI | ECUADOR         ',
+                      textStyle: TextStyle(
+                          color: Colors.black,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold)),
+                ]),
+          ),
+          actions: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                height: 50,
+                width: 50,
+                decoration: const BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage('images/isss(1).png'))),
+              ),
+            ),
+          ],
+          backgroundColor: Colors.black,
+          elevation: 0,
+          // title: Row(
+          //   children: [
+          //     const SizedBox(
+          //       width: 25,
+          //     ),
+          //     InkWell(
+          //       onTap: () =>
+          //           Navigator.pushNamed(context, TeamsScreen.routeName),
+          //       child: Row(
+          //         children: [
+          //           Icon(
+          //             Icons.album_outlined,
+          //           ),
+          //           SizedBox(
+          //             width: 10,
+          //           ),
+          //           Text(
+          //             'STORY',
+          //             style: TextStyle(fontSize: 15, color: Colors.white),
+          //           ),
+          //         ],
+          //       ),
+          //     ),
+          //     const SizedBox(
+          //       width: 15,
+          //     ),
+          //     InkWell(
+          //       onTap: () =>
+          //           Navigator.pushNamed(context, SocialMediaScreen.routeName),
+          //       child: Row(
+          //         children: [
+          //           Icon(Icons.album_outlined),
+          //           SizedBox(
+          //             width: 10,
+          //           ),
+          //           Text(
+          //             'FAQ',
+          //             style: TextStyle(fontSize: 15, color: Colors.white),
+          //           ),
+          //         ],
+          //       ),
+          //     ),
+          //     const SizedBox(
+          //       width: 15,
+          //     ),
+          //     InkWell(
+          //       onTap: () =>
+          //           Navigator.pushNamed(context, SocialMediaScreen.routeName),
+          //       child: Row(
+          //         children: [
+          //           Icon(Icons.album_outlined),
+          //           SizedBox(
+          //             width: 10,
+          //           ),
+          //           Text(
+          //             'ABOUT',
+          //             style: TextStyle(fontSize: 15, color: Colors.white),
+          //           ),
+          //         ],
+          //       ),
+          //     ),
+          //     const SizedBox(
+          //       width: 15,
+          //     ),
+          //     InkWell(
+          //       onTap: () =>
+          //           Navigator.pushNamed(context, SocialMediaScreen.routeName),
+          //       child: Row(
+          //         children: [
+          //           Icon(Icons.album_outlined),
+          //           SizedBox(
+          //             width: 10,
+          //           ),
+          //           Text(
+          //             'RESOURCES',
+          //             style: TextStyle(fontSize: 15, color: Colors.white),
+          //           ),
+          //         ],
+          //       ),
+          //     ),
+          //     const SizedBox(
+          //       width: 15,
+          //     ),
+          //   ],
+          // ),
+        ),
         backgroundColor: Colors.white,
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         body: SingleChildScrollView(
           child: Column(
             children: [
@@ -22,7 +156,7 @@ class BrandedContent extends StatelessWidget {
               Center(
                 child: Container(
                     width: double.infinity,
-                    child: Image(
+                    child: const Image(
                         fit: BoxFit.cover,
                         image: AssetImage('images/res.jpg'))),
               ),
@@ -30,10 +164,15 @@ class BrandedContent extends StatelessWidget {
               const SizedBox(
                 height: 10,
               ),
-              BioText(),
-              SizedBox(
+              ///////////////////////////////////////////////////////////////////////////////////////////////////////
+              const BioText(
+                color: Colors.black,
+              ),
+              /////////////////////////////////////////////////////////////////////////////////////////////////////
+              const SizedBox(
                 height: 10,
               ),
+              //////////////////////////////////////////////////////////////////////////////////////////////////////
               MultipleContainer(
                 titlecolor: Colors.white,
                 iconcolor: Colors.white,
@@ -44,9 +183,10 @@ class BrandedContent extends StatelessWidget {
                 color1: Colors.black,
                 color2: Colors.black,
                 color3: Colors.black,
-                colordescription: Colors.white,
+                colordescription: Colors.grey.shade700,
               ),
-              MultipleContainer(
+              ////////////////////////////////////////////////////////////////////////////////////////////////////
+              const MultipleContainer(
                 titlecolor: Colors.black,
                 iconcolor: Colors.black,
                 icon: Icons.construction,
@@ -58,13 +198,15 @@ class BrandedContent extends StatelessWidget {
                 color3: Colors.white,
                 colordescription: Colors.black,
               ),
-              SizedBox(
+              /////////////////////////////////////////////////////////////////////////////////////////////////////
+              const SizedBox(
                 height: 10,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
-              MultipleContainer(
+              /////////////////////////////////////////////////////////////////////////////////////////////////////
+              const MultipleContainer(
                 titlecolor: Colors.white,
                 iconcolor: Colors.white,
                 icon: Icons.home,
@@ -76,7 +218,8 @@ class BrandedContent extends StatelessWidget {
                 color3: Colors.black,
                 colordescription: Colors.white,
               ),
-              MultipleContainer(
+              /////////////////////////////////////////////////////////////////////////////////////////////////////
+              const MultipleContainer(
                 titlecolor: Colors.black,
                 iconcolor: Colors.black,
                 icon: Icons.construction,
@@ -88,16 +231,19 @@ class BrandedContent extends StatelessWidget {
                 color3: Colors.white,
                 colordescription: Colors.black,
               ),
-              SizedBox(
+              /////////////////////////////////////////////////////////////////////////////////////////////////////
+              const SizedBox(
                 height: 20,
               ),
-              Center(
+              ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+              const Center(
                   child: Icon(
                 Icons.camera_alt_outlined,
                 color: Colors.grey,
                 size: 60,
               )),
-              Text(
+              const Text(
                 'SPACES CAPTURED',
                 style: TextStyle(fontSize: 40, color: Colors.grey),
               ),
@@ -136,8 +282,9 @@ class BrandedContent extends StatelessWidget {
                   ],
                 ),
               ),
+              /////////////////////////////////////////////////////////////////////////////////////////////////////
               const SizedBox(
-                height: 30,
+                height: 70,
               ),
 
               const FeaturesWidget(),

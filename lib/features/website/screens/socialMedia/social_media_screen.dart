@@ -2,6 +2,9 @@ import 'package:drone_website/features/website/screens/branded/data/image_data.d
 import 'package:drone_website/features/website/screens/branded/widgets/image_cart.dart';
 import 'package:drone_website/features/website/screens/footer/features.dart';
 import 'package:drone_website/features/website/screens/footer/footer.dart';
+import 'package:drone_website/features/website/screens/home/widgets/scroll_view_body.dart';
+import 'package:drone_website/features/website/widgets/contact_widget.dart';
+import 'package:drone_website/features/website/widgets/faq_widget.dart';
 import 'package:flutter/material.dart';
 
 class SocialMediaScreen extends StatelessWidget {
@@ -22,31 +25,49 @@ class SocialMediaScreen extends StatelessWidget {
           automaticallyImplyLeading: true,
           backgroundColor: Colors.grey.shade900,
         ),
-        backgroundColor: Colors.grey.shade400,
-        body: Center(
-          child: Container(
-            width: 750,
-            child: ListView.builder(
-                itemCount: imageList.length,
-                //scrollDirection: Axis.horizontal,
-                itemBuilder: (context, index) {
-                  return ImageCart(
-                    imageData: imageList[index],
-                  );
-                }),
+        backgroundColor: Colors.white,
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              //ScrollViewBody(),
+              Center(
+                child: Text(
+                  'FAQ',
+                  style: TextStyle(fontSize: 80),
+                ),
+              ),
+              const SizedBox(
+                height: 50,
+              ),
+              FaqWidget(),
+              const SizedBox(
+                height: 50,
+              ),
+              Container(
+                height: 1,
+                color: Colors.black,
+              ),
+              const SizedBox(
+                height: 50,
+              ),
+              ContactWidget()
+            ],
           ),
         )
 
-        //  SingleChildScrollView(
-        //     child: Column(
-        //   children: [
-        //     const SizedBox(
-        //       height: 500,
-        //     ),
-        //     FeaturesWidget(),
-        //     FooterWidget()
-        //   ],
-        // )),
+        //  Center(
+        //   child: Container(
+        //     width: 750,
+        //     child: ListView.builder(
+        //         itemCount: imageList.length,
+        //         //scrollDirection: Axis.horizontal,
+        //         itemBuilder: (context, index) {
+        //           return ImageCart(
+        //             imageData: imageList[index],
+        //           );
+        //         }),
+        //   ),
+        // ),
         );
   }
 }

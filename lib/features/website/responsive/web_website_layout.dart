@@ -1,7 +1,10 @@
 import 'package:drone_website/features/website/screens/branded/branded_content.dart';
+import 'package:drone_website/features/website/screens/gallery/gallery_screen.dart';
 import 'package:drone_website/features/website/screens/home/home_screen.dart';
 import 'package:drone_website/features/website/screens/photography/photography_screen.dart';
+import 'package:drone_website/features/website/widgets/coming_up.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class WebWebsiteLayout extends StatefulWidget {
   WebWebsiteLayout({Key? key}) : super(key: key);
@@ -14,7 +17,7 @@ class _WebWebsiteLayoutState extends State<WebWebsiteLayout> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-        length: 3,
+        length: 5,
         child: Scaffold(
           appBar: AppBar(
             centerTitle: true,
@@ -26,28 +29,47 @@ class _WebWebsiteLayoutState extends State<WebWebsiteLayout> {
                       image: AssetImage('images/pitayaja.png'))),
             ),
             backgroundColor: Colors.black,
-            bottom: const TabBar(
-                labelStyle: TextStyle(fontWeight: FontWeight.w200),
+            // ignore: prefer_const_constructors
+            bottom: TabBar(
+                isScrollable: false,
+                labelStyle: TextStyle(
+                  fontWeight: FontWeight.w200,
+                ),
                 tabs: [
                   Tab(
-                    text: ' HOME',
+                    child: Text('HOME',
+                        style: GoogleFonts.averiaSansLibre(fontSize: 15)),
                     //icon: Icon(Icons.home),
                   ),
                   Tab(
-                    text: 'BRANDED CONTENT',
-                    // icon: Icon(Icons.star),
+                    child: Text('BRANDED CONTENT',
+                        style: GoogleFonts.averiaSansLibre(fontSize: 15)),
+                    //icon: Icon(Icons.home),
                   ),
                   Tab(
-                    text: 'PHOTOGRAPHY',
-                    // icon: Icon(Icons.person),
-                  )
+                    child: Text('MULTIMEDIA',
+                        style: GoogleFonts.averiaSansLibre(fontSize: 15)),
+                    //icon: Icon(Icons.home),
+                  ),
+                  Tab(
+                    child: Text('REAL ESTATE',
+                        style: GoogleFonts.averiaSansLibre(fontSize: 15)),
+                    //icon: Icon(Icons.home),
+                  ),
+                  Tab(
+                    child: Text('ENTERPRISE',
+                        style: GoogleFonts.averiaSansLibre(fontSize: 15)),
+                    //icon: Icon(Icons.home),
+                  ),
                 ]),
           ),
           body: const TabBarView(
             children: [
               HomeWebsiteScreen(),
               BrandedContent(),
-              PhotographyScreen()
+              PhotographyScreen(),
+              GalleryScreen(),
+              ComingUpScreen()
             ],
           ),
         ));

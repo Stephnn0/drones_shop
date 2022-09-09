@@ -8,7 +8,7 @@ class FeaturesWidget extends StatelessWidget {
     return Container(
       color: Colors.grey.shade100,
       child: Padding(
-        padding: const EdgeInsets.all(30.0),
+        padding: const EdgeInsets.all(20.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [

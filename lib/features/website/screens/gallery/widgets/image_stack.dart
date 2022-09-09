@@ -5,60 +5,109 @@ class ImageStack extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(children: [
-      const Center(
-        child: Image(image: AssetImage('images/casa.jpg')),
-      ),
-      Align(
-          heightFactor: 3.0,
-          child: Column(
+    return
+        //  Container(
+        //   child:
+
+        Stack(
+            alignment: Alignment.center,
+            ///////
+            fit: StackFit.loose,
             children: [
-              Container(
-                height: 40,
-                width: 2,
-                color: Colors.white,
-              ),
-              SizedBox(
-                height: 5,
-              ),
-              Text(
-                'WELCOME TO',
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.w100,
+          const Center(
+            child: Image(image: AssetImage('images/casa.jpg')),
+          ),
+
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              // Positioned(
+              //   left: 500,
+              //   top: 200,
+              //   child:
+              Expanded(
+                  flex: 1,
+                  child: SizedBox(
+                    height: 100,
+                    width: 100,
+                  )),
+              // Container(
+              //   child:
+              Expanded(
+                flex: 4,
+                child: Column(
+                  children: [
+                    Container(
+                      height: 40,
+                      width: 2,
+                      color: Colors.white,
+                    ),
+                    const SizedBox(
+                      height: 5,
+                    ),
+                    const Text(
+                      'WELCOME TO',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w100,
+                        color: Colors.white,
+                      ),
+                    ),
+                    const Text(
+                      'REAL ESTATE',
+                      style: TextStyle(
+                        fontSize: 60,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
+                    ),
+                    const Text(
+                      'PHOTOGRAPHY PRODUCTIONS',
+                      style: TextStyle(
+                        fontSize: 60,
+                        color: Colors.white,
+                      ),
+                    ),
+                    Container(
+                      height: 40,
+                      width: 2,
+                      color: Colors.white,
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    Container(
+                      height: 40,
+                      width: 150,
+                      decoration: BoxDecoration(
+                          border: Border.all(color: Colors.white),
+                          borderRadius: BorderRadius.circular(8)),
+                      child: const Center(
+                          child: Text(
+                        'CONTACT US',
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      )),
+                    ),
+                  ],
                 ),
               ),
-              Text(
-                'REAL STATE',
-                style: TextStyle(
-                  fontSize: 60,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              Text(
-                'PHOTOGRAPHY PRODUCTIONS',
-                style: TextStyle(
-                  fontSize: 60,
-                ),
-              ),
-              Container(
-                height: 40,
-                width: 2,
-                color: Colors.white,
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              Container(
-                height: 40,
-                width: 150,
-                decoration: BoxDecoration(
-                    border: Border.all(color: Colors.white),
-                    borderRadius: BorderRadius.circular(8)),
-                child: Center(child: Text('CONTACT US')),
-              ),
+              //  ),
+
+              Expanded(
+                  flex: 1,
+                  child: SizedBox(
+                    height: 100,
+                    width: 100,
+                  )),
+
+              //  ),
             ],
-          )),
-    ]);
+          )
+          //  ),
+        ]
+            // ),
+            );
   }
 }

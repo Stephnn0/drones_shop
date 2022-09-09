@@ -9,10 +9,12 @@ import 'package:drone_website/features/website/screens/footer/footer.dart';
 import 'package:drone_website/features/website/screens/footer/services.dart';
 import 'package:drone_website/features/website/screens/footer/widgets/carousel_slider.dart';
 import 'package:drone_website/features/website/screens/gallery/gallery_screen.dart';
+import 'package:drone_website/features/website/screens/gallery/widgets/image_stack.dart';
 import 'package:drone_website/features/website/screens/servicios/servicios_screen.dart';
 import 'package:drone_website/features/website/screens/socialMedia/social_media_screen.dart';
 import 'package:drone_website/features/website/screens/store/store_screen.dart';
 import 'package:drone_website/features/website/screens/teams/teams_screen.dart';
+import 'package:drone_website/features/website/widgets/contact_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 
@@ -37,66 +39,23 @@ class _HomeWebsiteScreenState extends State<HomeWebsiteScreen> {
           centerTitle: false,
           title: Row(
             children: [
-              Container(
-                height: 120,
-                width: 120,
-                decoration: const BoxDecoration(
-                    image:
-                        DecorationImage(image: AssetImage('images/dro.png'))),
-              ),
               const SizedBox(
-                width: 20,
-              ),
-              InkWell(
-                onTap: () =>
-                    Navigator.pushNamed(context, GalleryScreen.routeName),
-                child: const Text(
-                  'REAL STATE',
-                  style: TextStyle(fontSize: 15, color: Colors.white),
-                ),
-              ),
-              const SizedBox(
-                width: 15,
-              ),
-              InkWell(
-                onTap: () =>
-                    Navigator.pushNamed(context, ServiciosScreen.routeName),
-                child: const Text(
-                  'ENTERPRISE',
-                  style: TextStyle(fontSize: 15, color: Colors.white),
-                ),
-              ),
-              const SizedBox(
-                width: 15,
+                width: 25,
               ),
               InkWell(
                 onTap: () =>
                     Navigator.pushNamed(context, TeamsScreen.routeName),
-                child: const Text(
-                  'STORY',
-                  style: TextStyle(fontSize: 15, color: Colors.white),
-                ),
-              ),
-              // const SizedBox(
-              //   width: 15,
-              // ),
-              // // InkWell(
-              // //   onTap: () =>
-              // //       Navigator.pushNamed(context, DealsScreen.routeName),
-              // //   child: const Text(
-              // //     'STORE',
-              // //     style: TextStyle(fontSize: 15, color: Colors.white),
-              // //   ),
-              // // ),
-              const SizedBox(
-                width: 15,
-              ),
-              InkWell(
-                onTap: () =>
-                    Navigator.pushNamed(context, StoreScreen.routeName),
-                child: const Text(
-                  'VIDEOCLIPS',
-                  style: TextStyle(fontSize: 15, color: Colors.white),
+                child: Row(
+                  children: [
+                    Icon(Icons.album_outlined),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Text(
+                      'STORY',
+                      style: TextStyle(fontSize: 15, color: Colors.white),
+                    ),
+                  ],
                 ),
               ),
               const SizedBox(
@@ -105,10 +64,59 @@ class _HomeWebsiteScreenState extends State<HomeWebsiteScreen> {
               InkWell(
                 onTap: () =>
                     Navigator.pushNamed(context, SocialMediaScreen.routeName),
-                child: const Text(
-                  'FAQ ',
-                  style: TextStyle(fontSize: 15, color: Colors.white),
+                child: Row(
+                  children: [
+                    Icon(Icons.album_outlined),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Text(
+                      'FAQ',
+                      style: TextStyle(fontSize: 15, color: Colors.white),
+                    ),
+                  ],
                 ),
+              ),
+              const SizedBox(
+                width: 15,
+              ),
+              InkWell(
+                onTap: () =>
+                    Navigator.pushNamed(context, SocialMediaScreen.routeName),
+                child: Row(
+                  children: [
+                    Icon(Icons.album_outlined),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Text(
+                      'ABOUT',
+                      style: TextStyle(fontSize: 15, color: Colors.white),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(
+                width: 15,
+              ),
+              InkWell(
+                onTap: () =>
+                    Navigator.pushNamed(context, SocialMediaScreen.routeName),
+                child: Row(
+                  children: [
+                    Icon(Icons.album_outlined),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Text(
+                      'RESOURCES',
+                      style: TextStyle(fontSize: 15, color: Colors.white),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(
+                width: 15,
               ),
             ],
           ),
@@ -128,10 +136,14 @@ class _HomeWebsiteScreenState extends State<HomeWebsiteScreen> {
                 const SizedBox(
                   width: 25,
                 ),
-                const Icon(
-                  Icons.search,
-                  color: Colors.white,
-                  size: 20,
+                InkWell(
+                  onTap: () =>
+                      Navigator.pushNamed(context, AuthScreen.routeName),
+                  child: const Icon(
+                    Icons.shopping_cart,
+                    color: Colors.white,
+                    size: 20,
+                  ),
                 ),
                 const SizedBox(
                   width: 25,
@@ -151,34 +163,36 @@ class _HomeWebsiteScreenState extends State<HomeWebsiteScreen> {
               const Center(
                 child: Image(image: AssetImage('images/uno.jpg')),
               ),
-              Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: Container(
-                  decoration: BoxDecoration(
-                      color: Colors.black,
-                      borderRadius: BorderRadius.circular(16)),
-                  child: AnimatedTextKit(repeatForever: true, animatedTexts: [
-                    TypewriterAnimatedText(
-                        'Enjoy next-level comfort and convenience with DJI Goggles 2. ',
-                        textStyle: const TextStyle(
-                            color: Colors.white,
-                            fontSize: 50,
-                            fontWeight: FontWeight.bold)),
-                    TypewriterAnimatedText(
-                        'its design was made for you to be bold.',
-                        textStyle: const TextStyle(
-                            color: Colors.white,
-                            fontSize: 50,
-                            fontWeight: FontWeight.bold)),
-                    TypewriterAnimatedText('PITAJAYA DRONE STUDIOS...',
-                        textStyle: const TextStyle(
-                            color: Colors.white,
-                            //Color.fromARGB(255, 255, 182, 11),
-                            fontSize: 50,
-                            fontWeight: FontWeight.bold))
-                  ]),
-                ),
-              ),
+              //const ImageStack(),
+
+              // Padding(
+              //   padding: const EdgeInsets.all(20.0),
+              //   child: Container(
+              //     decoration: BoxDecoration(
+              //         color: Colors.black,
+              //         borderRadius: BorderRadius.circular(16)),
+              //     child: AnimatedTextKit(repeatForever: true, animatedTexts: [
+              //       TypewriterAnimatedText(
+              //           'Enjoy next-level comfort and convenience with DJI Goggles 2. ',
+              //           textStyle: const TextStyle(
+              //               color: Colors.white,
+              //               fontSize: 50,
+              //               fontWeight: FontWeight.bold)),
+              //       TypewriterAnimatedText(
+              //           'its design was made for you to be bold.',
+              //           textStyle: const TextStyle(
+              //               color: Colors.white,
+              //               fontSize: 50,
+              //               fontWeight: FontWeight.bold)),
+              //       TypewriterAnimatedText('PITAJAYA DRONE STUDIOS...',
+              //           textStyle: const TextStyle(
+              //               color: Colors.white,
+              //               //Color.fromARGB(255, 255, 182, 11),
+              //               fontSize: 50,
+              //               fontWeight: FontWeight.bold))
+              //     ]),
+              //   ),
+              // ),
             ]),
             const SizedBox(
               height: 30,
@@ -189,24 +203,30 @@ class _HomeWebsiteScreenState extends State<HomeWebsiteScreen> {
               child: const Center(
                   child: Text(
                 'Explore our Different Types of Services! ',
-                style: TextStyle(fontSize: 50),
+                style: TextStyle(fontSize: 50, color: Colors.white),
               )),
             ),
-            BioText(),
-            CarouselSliderWidget(),
+            const BioText(
+              color: Colors.black,
+            ),
+            const CarouselSliderWidget(),
             Container(
               height: 50,
               color: Colors.black,
             ),
-            BioText(),
-            CarouselSliderWidget(),
+            const BioText(
+              color: Colors.black,
+            ),
+            const CarouselSliderWidget(),
             Container(
               height: 50,
               color: Colors.black,
             ),
-            BioText(),
-            CarouselSliderWidget(),
-            SizedBox(
+            const BioText(
+              color: Colors.black,
+            ),
+            const CarouselSliderWidget(),
+            const SizedBox(
               height: 10,
             ),
             Container(
@@ -216,7 +236,25 @@ class _HomeWebsiteScreenState extends State<HomeWebsiteScreen> {
             const SizedBox(
               height: 30,
             ),
-            const ServicesWidget(),
+            //////////////////////////////////////////////////////////////////////////
+
+            SizedBox(
+              height: 730,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: const [
+                  ServicesWidget(),
+                  ServicesWidget(),
+                  ServicesWidget(),
+                ],
+              ),
+            ),
+
+            const BioText(
+              color: Colors.white,
+            ),
+
+            /////////////////////////////////////////////////
             const SizedBox(
               height: 5,
             ),

@@ -89,7 +89,7 @@ class AuthService {
                 context, ResponsiveLayoutStore.routeName, (route) => false);
           });
     } catch (e) {
-      print(e);
+      //print(e);
       showSnackBar(context, e.toString());
     }
   }

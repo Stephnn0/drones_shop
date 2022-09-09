@@ -53,12 +53,6 @@ Route<dynamic> generateRoute(RouteSettings routeSettings) {
         settings: routeSettings,
         builder: (_) => TeamsScreen(),
       );
-    ////////////////////////////////////////////////////////////////////////////////////////////////authentication
-    // case WebStoreLayout.routeName:
-    //   return MaterialPageRoute(
-    //     settings: routeSettings,
-    //     builder: (_) => WebStoreLayout(),
-    //   );
     case ResponsiveLayoutStore.routeName:
       return MaterialPageRoute(
         settings: routeSettings,

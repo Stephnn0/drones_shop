@@ -6,96 +6,61 @@ class FooterWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.grey.shade900,
+      color: Colors.black,
       child: Padding(
         padding: const EdgeInsets.all(50.0),
         child: Column(
           children: [
             Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
               Column(
-                children: [
-                  Text('Category'),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Text('Products Category'),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Text('Products Category'),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Text('Products Category'),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Text('Products Category'),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Text('Products Category'),
-                  SizedBox(
-                    height: 10,
+                children: const [
+                  Text(
+                    'Category',
+                    style: TextStyle(color: Colors.white),
                   ),
                   SizedBox(
                     height: 10,
                   ),
-                  Text('Products Category'),
+                  Text('Products Category',
+                      style: TextStyle(color: Colors.white)),
                   SizedBox(
                     height: 10,
                   ),
-                  Text('Products Category'),
+                  Text('Products Category',
+                      style: TextStyle(color: Colors.white)),
                   SizedBox(
                     height: 10,
                   ),
-                  Text('Products Category'),
+                  Text('Products Category',
+                      style: TextStyle(color: Colors.white)),
                   SizedBox(
                     height: 10,
                   ),
-                ],
-              ),
-              const SizedBox(
-                width: 10,
-              ),
-              Column(
-                children: [
-                  Text('Store'),
+                  Text('Products Category',
+                      style: TextStyle(color: Colors.white)),
                   SizedBox(
                     height: 10,
                   ),
-                  Text('Products Category'),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Text('Products Category'),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Text('Products Category'),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Text('Products Category'),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Text('Products Category'),
+                  Text('Products Category',
+                      style: TextStyle(color: Colors.white)),
                   SizedBox(
                     height: 10,
                   ),
                   SizedBox(
                     height: 10,
                   ),
-                  Text('Products Category'),
+                  Text('Products Category',
+                      style: TextStyle(color: Colors.white)),
                   SizedBox(
                     height: 10,
                   ),
-                  Text('Products Category'),
+                  Text('Products Category',
+                      style: TextStyle(color: Colors.white)),
                   SizedBox(
                     height: 10,
                   ),
-                  Text('Products Category'),
+                  Text('Products Category',
+                      style: TextStyle(color: Colors.white)),
                   SizedBox(
                     height: 10,
                   ),
@@ -105,43 +70,51 @@ class FooterWidget extends StatelessWidget {
                 width: 10,
               ),
               Column(
-                children: [
-                  Text('Fly Safe'),
+                children: const [
+                  Text('Store', style: TextStyle(color: Colors.white)),
                   SizedBox(
                     height: 10,
                   ),
-                  Text('Products Category'),
+                  Text('Products Category',
+                      style: TextStyle(color: Colors.white)),
                   SizedBox(
                     height: 10,
                   ),
-                  Text('Products Category'),
+                  Text('Products Category',
+                      style: TextStyle(color: Colors.white)),
                   SizedBox(
                     height: 10,
                   ),
-                  Text('Products Category'),
+                  Text('Products Category',
+                      style: TextStyle(color: Colors.white)),
                   SizedBox(
                     height: 10,
                   ),
-                  Text('Products Category'),
+                  Text('Products Category',
+                      style: TextStyle(color: Colors.white)),
                   SizedBox(
                     height: 10,
                   ),
-                  Text('Products Category'),
+                  Text('Products Category',
+                      style: TextStyle(color: Colors.white)),
                   SizedBox(
                     height: 10,
                   ),
                   SizedBox(
                     height: 10,
                   ),
-                  Text('Products Category'),
+                  Text('Products Category',
+                      style: TextStyle(color: Colors.white)),
                   SizedBox(
                     height: 10,
                   ),
-                  Text('Products Category'),
+                  Text('Products Category',
+                      style: TextStyle(color: Colors.white)),
                   SizedBox(
                     height: 10,
                   ),
-                  Text('Products Category'),
+                  Text('Products Category',
+                      style: TextStyle(color: Colors.white)),
                   SizedBox(
                     height: 10,
                   ),
@@ -151,43 +124,51 @@ class FooterWidget extends StatelessWidget {
                 width: 10,
               ),
               Column(
-                children: [
-                  Text('Explore'),
+                children: const [
+                  Text('Fly Safe', style: TextStyle(color: Colors.white)),
                   SizedBox(
                     height: 10,
                   ),
-                  Text('Products Category'),
+                  Text('Products Category',
+                      style: TextStyle(color: Colors.white)),
                   SizedBox(
                     height: 10,
                   ),
-                  Text('Products Category'),
+                  Text('Products Category',
+                      style: TextStyle(color: Colors.white)),
                   SizedBox(
                     height: 10,
                   ),
-                  Text('Products Category'),
+                  Text('Products Category',
+                      style: TextStyle(color: Colors.white)),
                   SizedBox(
                     height: 10,
                   ),
-                  Text('Products Category'),
+                  Text('Products Category',
+                      style: TextStyle(color: Colors.white)),
                   SizedBox(
                     height: 10,
                   ),
-                  Text('Products Category'),
+                  Text('Products Category',
+                      style: TextStyle(color: Colors.white)),
                   SizedBox(
                     height: 10,
                   ),
                   SizedBox(
                     height: 10,
                   ),
-                  Text('Products Category'),
+                  Text('Products Category',
+                      style: TextStyle(color: Colors.white)),
                   SizedBox(
                     height: 10,
                   ),
-                  Text('Products Category'),
+                  Text('Products Category',
+                      style: TextStyle(color: Colors.white)),
                   SizedBox(
                     height: 10,
                   ),
-                  Text('Products Category'),
+                  Text('Products Category',
+                      style: TextStyle(color: Colors.white)),
                   SizedBox(
                     height: 10,
                   ),
@@ -196,85 +177,99 @@ class FooterWidget extends StatelessWidget {
               const SizedBox(
                 width: 10,
               ),
-              // Column(
-              //   children: [
-              //     Text('Comunity'),
-              //     SizedBox(
-              //       height: 10,
-              //     ),
-              //     Text('Products Category'),
-              //     SizedBox(
-              //       height: 10,
-              //     ),
-              //     Text('Products Category'),
-              //     SizedBox(
-              //       height: 10,
-              //     ),
-              //     Text('Products Category'),
-              //     SizedBox(
-              //       height: 10,
-              //     ),
-              //     Text('Products Category'),
-              //     SizedBox(
-              //       height: 10,
-              //     ),
-              //     Text('Products Category'),
-              //     SizedBox(
-              //       height: 10,
-              //     ),
-              //     SizedBox(
-              //       height: 10,
-              //     ),
-              //     Text('Products Category'),
-              //     SizedBox(
-              //       height: 10,
-              //     ),
-              //     Text('Products Category'),
-              //     SizedBox(
-              //       height: 10,
-              //     ),
-              //     Text('Products Category'),
-              //     SizedBox(
-              //       height: 10,
-              //     ),
-              //   ],
-              // ),
+              Column(
+                children: const [
+                  Text('Explore', style: TextStyle(color: Colors.white)),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text('Products Category',
+                      style: TextStyle(color: Colors.white)),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text('Products Category',
+                      style: TextStyle(color: Colors.white)),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text('Products Category',
+                      style: TextStyle(color: Colors.white)),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text('Products Category',
+                      style: TextStyle(color: Colors.white)),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text('Products Category',
+                      style: TextStyle(color: Colors.white)),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text('Products Category',
+                      style: TextStyle(color: Colors.white)),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text('Products Category',
+                      style: TextStyle(color: Colors.white)),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text('Products Category',
+                      style: TextStyle(color: Colors.white)),
+                  SizedBox(
+                    height: 10,
+                  ),
+                ],
+              ),
+              const SizedBox(
+                width: 10,
+              ),
             ]),
             /////////////////////////////////////////////////////////////////////////////////////////////////////////
             const SizedBox(
               height: 50,
             ),
             Row(
-              children: [
-                Icon(Icons.camera_alt_outlined),
+              children: const [
+                Icon(
+                  Icons.camera_alt_outlined,
+                  color: Colors.white,
+                ),
                 SizedBox(
                   width: 20,
                 ),
-                Text(' Category'),
+                Text(' Category', style: TextStyle(color: Colors.white)),
                 SizedBox(
                   width: 20,
                 ),
-                Text('Products '),
+                Text('Products ', style: TextStyle(color: Colors.white)),
                 SizedBox(
                   width: 20,
                 ),
-                Text('Products '),
+                Text('Products ', style: TextStyle(color: Colors.white)),
                 SizedBox(
                   width: 20,
                 ),
-                Text('Products'),
+                Text('Products', style: TextStyle(color: Colors.white)),
                 SizedBox(
                   width: 20,
                 ),
-                Text('Products '),
+                Text('Products ', style: TextStyle(color: Colors.white)),
                 SizedBox(
                   height: 20,
                 ),
-                Text('Products'),
+                Text('Products', style: TextStyle(color: Colors.white)),
                 SizedBox(
                   width: 20,
                 ),
-                Text('Products'),
+                Text('Products', style: TextStyle(color: Colors.white)),
               ],
             ),
 
@@ -290,45 +285,47 @@ class FooterWidget extends StatelessWidget {
               height: 10,
             ),
             Row(
-              children: [
-                Text(' Category'),
+              children: const [
+                Text(' Category', style: TextStyle(color: Colors.white)),
                 SizedBox(
                   width: 20,
                 ),
-                Text('Products '),
+                Text('Products ', style: TextStyle(color: Colors.white)),
                 SizedBox(
                   width: 20,
                 ),
-                Text('Products '),
+                Text('Products ', style: TextStyle(color: Colors.white)),
                 SizedBox(
                   width: 20,
                 ),
-                Text('Products'),
+                Text('Products', style: TextStyle(color: Colors.white)),
                 SizedBox(
                   width: 20,
                 ),
-                Text('Products '),
+                Text('Products ', style: TextStyle(color: Colors.white)),
                 SizedBox(
                   height: 20,
                 ),
-                Text('Products'),
+                Text('Products', style: TextStyle(color: Colors.white)),
                 SizedBox(
                   width: 20,
                 ),
-                Text('Products'),
+                Text('Products', style: TextStyle(color: Colors.white)),
               ],
             ),
             const SizedBox(
               height: 10,
             ),
             Row(
-              children: [
+              children: const [
                 Text(
-                    'Copyright @ 2022 Pitajaya Drone Studios All Rights Reserved.'),
+                    'Copyright @ 2022 Pitajaya Drone Studios All Rights Reserved.',
+                    style: TextStyle(color: Colors.white)),
                 SizedBox(
                   width: 20,
                 ),
-                Text('Feedback on web experience.'),
+                Text('Feedback on web experience.',
+                    style: TextStyle(color: Colors.white)),
               ],
             ),
           ],

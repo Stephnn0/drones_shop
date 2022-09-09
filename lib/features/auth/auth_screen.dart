@@ -192,7 +192,7 @@ class _AuthScreenState extends State<AuthScreen> {
                                 //         horizontal:
                                 //             MediaQuery.of(context).size.width / 3)
                                 //     : const EdgeInsets.symmetric(horizontal: 32),
-                                color: Colors.blue,
+                                color: Colors.white,
                                 child: Form(
                                   key: _signInFormKey,
                                   child: Column(children: [
