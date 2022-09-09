@@ -14,6 +14,9 @@ class WebWebsiteLayout extends StatefulWidget {
 }
 
 class _WebWebsiteLayoutState extends State<WebWebsiteLayout> {
+  final List<String> images = [
+    'assets/images/pitayaja.png',
+  ];
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -24,9 +27,8 @@ class _WebWebsiteLayoutState extends State<WebWebsiteLayout> {
             title: Container(
               height: 80,
               width: 90,
-              decoration: const BoxDecoration(
-                  image: DecorationImage(
-                      image: AssetImage('images/pitayaja.png'))),
+              decoration: BoxDecoration(
+                  image: DecorationImage(image: AssetImage(images[0]))),
             ),
             backgroundColor: Colors.black,
             // ignore: prefer_const_constructors
