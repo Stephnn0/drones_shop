@@ -109,7 +109,7 @@ class _HomeWebsiteScreenState extends State<HomeWebsiteScreen> {
                       width: 10,
                     ),
                     Text(
-                      'RESOURCES',
+                      'FEATURES',
                       style: TextStyle(fontSize: 15, color: Colors.white),
                     ),
                   ],
