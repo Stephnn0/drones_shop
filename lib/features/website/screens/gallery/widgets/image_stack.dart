@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 
 class ImageStack extends StatelessWidget {
-  const ImageStack({Key? key}) : super(key: key);
+  ImageStack({Key? key}) : super(key: key);
+
+  final List<String> images = [
+    'assets/images/casa.jpg',
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -14,8 +18,8 @@ class ImageStack extends StatelessWidget {
             ///////
             fit: StackFit.loose,
             children: [
-          const Center(
-            child: Image(image: AssetImage('images/casa.jpg')),
+          Center(
+            child: Image(image: AssetImage(images[0])),
           ),
 
           Row(

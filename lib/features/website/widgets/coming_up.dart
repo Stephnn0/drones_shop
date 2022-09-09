@@ -2,8 +2,10 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 
 class ComingUpScreen extends StatelessWidget {
-  const ComingUpScreen({Key? key}) : super(key: key);
-
+  ComingUpScreen({Key? key}) : super(key: key);
+  final List<String> images = [
+    'assets/images/pitayaja.png',
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,23 +52,34 @@ class ComingUpScreen extends StatelessWidget {
             ),
           ]),
       backgroundColor: Colors.black,
-      body: Center(
-          child: Column(
-        children: [
-          Icon(
-            Icons.construction,
-            color: Colors.white,
-            size: 80,
-          ),
-          SizedBox(
-            height: 30,
-          ),
-          Text(
-            'COMING UP SOON!!',
-            style: TextStyle(color: Colors.white, fontSize: 70),
-          ),
-        ],
-      )),
+      body: SingleChildScrollView(
+        child: Center(
+            child: Column(
+          children: [
+            Icon(
+              Icons.construction,
+              color: Colors.white,
+              size: 80,
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            Text(
+              'COMING UP SOON!!',
+              style: TextStyle(color: Colors.white, fontSize: 70),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Container(
+              height: 700,
+              width: 700,
+              decoration: BoxDecoration(
+                  image: DecorationImage(image: AssetImage(images[0]))),
+            ),
+          ],
+        )),
+      ),
     );
   }
 }

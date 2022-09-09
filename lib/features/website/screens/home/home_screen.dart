@@ -28,10 +28,13 @@ class HomeWebsiteScreen extends StatefulWidget {
 }
 
 class _HomeWebsiteScreenState extends State<HomeWebsiteScreen> {
+  final List<String> images = [
+    'assets/images/uno.jpg',
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey.shade200,
+      backgroundColor: Colors.black,
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(50.0),
         child: AppBar(
@@ -46,7 +49,7 @@ class _HomeWebsiteScreenState extends State<HomeWebsiteScreen> {
                 onTap: () =>
                     Navigator.pushNamed(context, TeamsScreen.routeName),
                 child: Row(
-                  children: [
+                  children: const [
                     Icon(Icons.album_outlined),
                     SizedBox(
                       width: 10,
@@ -65,7 +68,7 @@ class _HomeWebsiteScreenState extends State<HomeWebsiteScreen> {
                 onTap: () =>
                     Navigator.pushNamed(context, SocialMediaScreen.routeName),
                 child: Row(
-                  children: [
+                  children: const [
                     Icon(Icons.album_outlined),
                     SizedBox(
                       width: 10,
@@ -84,7 +87,7 @@ class _HomeWebsiteScreenState extends State<HomeWebsiteScreen> {
                 onTap: () =>
                     Navigator.pushNamed(context, SocialMediaScreen.routeName),
                 child: Row(
-                  children: [
+                  children: const [
                     Icon(Icons.album_outlined),
                     SizedBox(
                       width: 10,
@@ -103,7 +106,7 @@ class _HomeWebsiteScreenState extends State<HomeWebsiteScreen> {
                 onTap: () =>
                     Navigator.pushNamed(context, SocialMediaScreen.routeName),
                 child: Row(
-                  children: [
+                  children: const [
                     Icon(Icons.album_outlined),
                     SizedBox(
                       width: 10,
@@ -160,8 +163,8 @@ class _HomeWebsiteScreenState extends State<HomeWebsiteScreen> {
         child: Column(
           children: [
             Stack(children: [
-              const Center(
-                child: Image(image: AssetImage('images/uno.jpg')),
+              Center(
+                child: Image(image: AssetImage(images[0])),
               ),
               //const ImageStack(),
 
@@ -199,31 +202,35 @@ class _HomeWebsiteScreenState extends State<HomeWebsiteScreen> {
             ),
             Container(
               height: 100,
-              color: Colors.black,
+              color: Colors.white,
               child: const Center(
                   child: Text(
                 'Explore our Different Types of Services! ',
-                style: TextStyle(fontSize: 50, color: Colors.white),
+                style: TextStyle(fontSize: 50, color: Colors.black),
               )),
             ),
-            const BioText(
-              color: Colors.black,
+            BioText(
+              color: Colors.grey.shade700,
+            ),
+            Container(
+              height: 50,
+              color: Colors.white,
             ),
             const CarouselSliderWidget(),
             Container(
               height: 50,
               color: Colors.black,
             ),
-            const BioText(
-              color: Colors.black,
+            BioText(
+              color: Colors.grey.shade700,
             ),
             const CarouselSliderWidget(),
             Container(
               height: 50,
               color: Colors.black,
             ),
-            const BioText(
-              color: Colors.black,
+            BioText(
+              color: Colors.grey.shade700,
             ),
             const CarouselSliderWidget(),
             const SizedBox(
@@ -238,20 +245,20 @@ class _HomeWebsiteScreenState extends State<HomeWebsiteScreen> {
             ),
             //////////////////////////////////////////////////////////////////////////
 
-            SizedBox(
-              height: 730,
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                children: const [
-                  ServicesWidget(),
-                  ServicesWidget(),
-                  ServicesWidget(),
-                ],
-              ),
-            ),
+            // SizedBox(
+            //   height: 730,
+            //   child: ListView(
+            //     scrollDirection: Axis.horizontal,
+            //     children: const [
+            //       ServicesWidget(),
+            //       ServicesWidget(),
+            //       ServicesWidget(),
+            //     ],
+            //   ),
+            // ),
 
-            const BioText(
-              color: Colors.white,
+            BioText(
+              color: Colors.grey.shade700,
             ),
 
             /////////////////////////////////////////////////

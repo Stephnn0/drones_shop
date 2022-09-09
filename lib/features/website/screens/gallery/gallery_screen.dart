@@ -14,8 +14,13 @@ import 'package:flutter/material.dart';
 class GalleryScreen extends StatelessWidget {
   static const String routeName = '/realstate';
 
-  const GalleryScreen({Key? key}) : super(key: key);
+  GalleryScreen({Key? key}) : super(key: key);
   ///////////////////////////////////////////////////////////////////////////////////////////////////real state page
+
+  final List<String> images = [
+    'assets/images/youtub(1).png',
+    'assets/images/isss(1).png',
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -26,9 +31,8 @@ class GalleryScreen extends StatelessWidget {
           child: Container(
             height: 50,
             width: 50,
-            decoration: const BoxDecoration(
-                image:
-                    DecorationImage(image: AssetImage('images/youtub(1).png'))),
+            decoration: BoxDecoration(
+                image: DecorationImage(image: AssetImage(images[0]))),
           ),
         ),
 
@@ -38,9 +42,8 @@ class GalleryScreen extends StatelessWidget {
             child: Container(
               height: 50,
               width: 50,
-              decoration: const BoxDecoration(
-                  image:
-                      DecorationImage(image: AssetImage('images/isss(1).png'))),
+              decoration: BoxDecoration(
+                  image: DecorationImage(image: AssetImage(images[1]))),
             ),
           ),
         ],
@@ -77,7 +80,7 @@ class GalleryScreen extends StatelessWidget {
           child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const ImageStack(),
+          ImageStack(),
           BioText(
             color: Colors.grey.shade700,
           ),

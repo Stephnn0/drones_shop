@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class WebWebsiteLayout extends StatefulWidget {
-  WebWebsiteLayout({Key? key}) : super(key: key);
+  const WebWebsiteLayout({Key? key}) : super(key: key);
 
   @override
   State<WebWebsiteLayout> createState() => _WebWebsiteLayoutState();
@@ -33,8 +33,9 @@ class _WebWebsiteLayoutState extends State<WebWebsiteLayout> {
             backgroundColor: Colors.black,
             // ignore: prefer_const_constructors
             bottom: TabBar(
+                physics: const NeverScrollableScrollPhysics(),
                 isScrollable: false,
-                labelStyle: TextStyle(
+                labelStyle: const TextStyle(
                   fontWeight: FontWeight.w200,
                 ),
                 tabs: [
@@ -65,13 +66,13 @@ class _WebWebsiteLayoutState extends State<WebWebsiteLayout> {
                   ),
                 ]),
           ),
-          body: const TabBarView(
+          body: TabBarView(
             children: [
               HomeWebsiteScreen(),
               BrandedContent(),
               PhotographyScreen(),
               GalleryScreen(),
-              ComingUpScreen()
+              ComingUpScreen(),
             ],
           ),
         ));
