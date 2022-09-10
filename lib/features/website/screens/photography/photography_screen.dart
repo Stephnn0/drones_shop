@@ -7,6 +7,7 @@ import 'package:drone_website/features/website/screens/home/widgets/scroll_view_
 import 'package:drone_website/features/website/screens/photography/widgets/duo_square.dart';
 import 'package:drone_website/features/website/widgets/contact_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:video_player/video_player.dart';
 
 class PhotographyScreen extends StatefulWidget {
   const PhotographyScreen({Key? key}) : super(key: key);
@@ -20,6 +21,28 @@ class _PhotographyScreenState extends State<PhotographyScreen> {
     'assets/images/youtub(1).png',
     'assets/images/vegeta(2).png',
   ];
+
+  final List<String> video = [
+    'assets/images/video.mp4',
+  ];
+
+  late VideoPlayerController _controller;
+
+  late Future<void> _initializeVideoPlayerFuture;
+  @override
+  void initState() {
+    _controller = VideoPlayerController.asset(video[0]);
+    _initializeVideoPlayerFuture = _controller.initialize();
+    _controller.setLooping(true);
+    _controller.setVolume(1.0);
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -69,13 +92,42 @@ class _PhotographyScreenState extends State<PhotographyScreen> {
           child: Column(
             children: [
               ////////////////////////////////////////////////////////////////////////////////////////////////////////
-              Center(
-                child: SizedBox(
-                    width: double.infinity,
-                    child: Image(
-                        fit: BoxFit.cover,
-                        image: AssetImage('images/panecillo.jpg'))),
-              ),
+              // Center(
+              //   child: SizedBox(
+              //       width: double.infinity,
+              //       child: Image(
+              //           fit: BoxFit.cover,
+              //           image: AssetImage('images/panecillo.jpg'))),
+              // ),
+
+              FutureBuilder(
+                  future: _initializeVideoPlayerFuture,
+                  builder: (context, snapshot) {
+                    if (snapshot.connectionState == ConnectionState.done) {
+                      return AspectRatio(
+                        aspectRatio: _controller.value.aspectRatio,
+                        child: VideoPlayer(_controller),
+                      );
+                    } else {
+                      return Center(
+                        child: CircularProgressIndicator(),
+                      );
+                    }
+                  }),
+              FloatingActionButton(
+                  onPressed: () {
+                    setState(() {
+                      if (_controller.value.isPlaying) {
+                        _controller.pause();
+                      } else {
+                        _controller.play();
+                      }
+                    });
+                  },
+                  child: Icon(_controller.value.isPlaying
+                      ? Icons.pause
+                      : Icons.play_arrow)),
+
               ////////////////////////////////////////////////////////////////////////////////////////////////////////
               BioText(
                 text:
@@ -95,12 +147,28 @@ class _PhotographyScreenState extends State<PhotographyScreen> {
                       return const DuoSquare();
                     }),
               ),
+              BioText(
+                text:
+                    'Produce high-quality content with the state-of-the-art equipment with our high-tech drone team. Our talented production studio are always at the ready with a full inventory of professional-grade equipment. We are ready to help out develop, produce and have a massive impact in any type of industry ',
+                color: Colors.grey.shade700,
+              ),
 
               const CarouselSliderWidget(),
               Container(
                 height: 50,
                 color: Colors.black,
               ),
+              const SizedBox(
+                height: 10,
+              ),
+              // BioText(
+              //   text:
+              //       'Produce high-quality content with the state-of-the-art equipment with our high-tech drone team. Our talented production studio are always at the ready with a full inventory of professional-grade equipment. We are ready to help out develop, produce and have a massive impact in any type of industry ',
+              //   color: Colors.grey.shade700,
+              // ),
+              // const SizedBox(
+              //   height: 10,
+              // ),
 
               Container(
                 height: 1030,
@@ -110,6 +178,11 @@ class _PhotographyScreenState extends State<PhotographyScreen> {
                     itemBuilder: (context, index) {
                       return const DuoSquare();
                     }),
+              ),
+              BioText(
+                text:
+                    'Produce high-quality content with the state-of-the-art equipment with our high-tech drone team. Our talented production studio are always at the ready with a full inventory of professional-grade equipment. We are ready to help out develop, produce and have a massive impact in any type of industry ',
+                color: Colors.grey.shade700,
               ),
 
               const CarouselSliderWidget(),
@@ -156,7 +229,7 @@ class _PhotographyScreenState extends State<PhotographyScreen> {
                 color: Colors.white,
                 child: const Center(
                     child: Text(
-                  "YOU CAN FIND US IN INSTAGRAM AS @PITAJAYA_DRONES",
+                  "@PITAJAYA_DRONES",
                   style: TextStyle(
                     fontSize: 50,
                     color: Colors.black,

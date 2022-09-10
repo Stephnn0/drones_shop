@@ -15,6 +15,7 @@ class BrandedContent extends StatelessWidget {
     'assets/images/youtub(1).png',
     'assets/images/isss(1).png',
     'assets/images/casa.jpg',
+    'assets/images/vegeta(2).png',
   ];
 
   @override
@@ -65,7 +66,7 @@ class BrandedContent extends StatelessWidget {
           backgroundColor: Colors.black,
           elevation: 0,
         ),
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.black,
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         body: SingleChildScrollView(
           child: Column(
@@ -92,7 +93,7 @@ class BrandedContent extends StatelessWidget {
                 child: BioText(
                   text:
                       'Branded Content is Digital Video Entertainment aimed specifically for brands, designed to develop high quality media productions while connecting withaudiences on an emotional level.',
-                  color: Colors.black,
+                  color: Colors.grey.shade700,
                 ),
               ),
               /////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -103,10 +104,10 @@ class BrandedContent extends StatelessWidget {
               MultipleContainer(
                 titlecolor: Colors.white,
                 iconcolor: Colors.white,
-                icon: Icons.home,
+                icon: Icons.video_collection,
                 description:
                     'When creating branded content we believe it is integral to fully understand your target audience. This involves getting to know the demographics and psychographics of your audience which may include their lifestyle choices, social media preferences and attitudes towards ethical issues. ',
-                title: 'ARCHITECTURE',
+                title: 'PRODUCTIONS',
                 color1: Colors.black,
                 color2: Colors.black,
                 color3: Colors.black,
@@ -116,10 +117,10 @@ class BrandedContent extends StatelessWidget {
               const MultipleContainer(
                 titlecolor: Colors.black,
                 iconcolor: Colors.black,
-                icon: Icons.construction,
+                icon: Icons.video_camera_back,
                 description:
                     'Branded content that is in line with your values and your audience values. We help you build a positive brand perception that will make you build trust and credibility with your audience. We develop closer customer relationships with the intent to evoke emotions with your branded content.',
-                title: 'ARCHITECTURE',
+                title: 'VIDEOS',
                 color1: Colors.white,
                 color2: Colors.white,
                 color3: Colors.white,
@@ -136,10 +137,10 @@ class BrandedContent extends StatelessWidget {
               MultipleContainer(
                 titlecolor: Colors.white,
                 iconcolor: Colors.white,
-                icon: Icons.home,
+                icon: Icons.camera_alt_outlined,
                 description:
                     'Our years of experience has allow us to develop content that is most successful and powerful when it comes to creating stories to tell. By crafting a good narrative we will create  chemistry with your audience, connect with them on a deeper level and create content that sticks in their minds',
-                title: 'ARCHITECTURE',
+                title: 'PHOTOGRAPHY',
                 color1: Colors.black,
                 color2: Colors.black,
                 color3: Colors.black,
@@ -149,10 +150,10 @@ class BrandedContent extends StatelessWidget {
               const MultipleContainer(
                 titlecolor: Colors.black,
                 iconcolor: Colors.black,
-                icon: Icons.construction,
+                icon: Icons.video_stable,
                 description:
                     'We help you develop closer customer relationships with the intent to evoke emotions with your branded content. You can also provide clear milestones throughout the production to determine if and where your team has to go back and make changes.',
-                title: 'ARCHITECTURE',
+                title: 'AERIAL SERVICES',
                 color1: Colors.white,
                 color2: Colors.white,
                 color3: Colors.white,
@@ -164,12 +165,18 @@ class BrandedContent extends StatelessWidget {
               ),
               ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-              const Center(
-                  child: Icon(
-                Icons.camera_alt_outlined,
-                color: Colors.grey,
-                size: 60,
-              )),
+              // const Center(
+              //     child: Icon(
+              //   Icons.camera_alt_outlined,
+              //   color: Colors.grey,
+              //   size: 60,
+              // )),
+              Container(
+                height: 190,
+                width: 190,
+                decoration: BoxDecoration(
+                    image: DecorationImage(image: AssetImage(images[4]))),
+              ),
               const Text(
                 'SPACES CAPTURED',
                 style: TextStyle(fontSize: 40, color: Colors.grey),

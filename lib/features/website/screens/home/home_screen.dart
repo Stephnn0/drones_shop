@@ -5,6 +5,7 @@ import 'package:drone_website/features/website/screens/footer/footer.dart';
 import 'package:drone_website/features/website/screens/footer/widgets/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:video_player/video_player.dart';
 
 class HomeWebsiteScreen extends StatefulWidget {
   static const String routeName = '/home';
@@ -18,7 +19,33 @@ class HomeWebsiteScreen extends StatefulWidget {
 class _HomeWebsiteScreenState extends State<HomeWebsiteScreen> {
   final List<String> images = [
     'assets/images/uno.jpg',
+    'assets/images/pitayaja.png',
+    'assets/images/redbull.jpg',
+    'assets/images/net.jpeg',
   ];
+
+  final List<String> video = [
+    'assets/images/video2.mp4',
+  ];
+
+  late VideoPlayerController _controller;
+
+  late Future<void> _initializeVideoPlayerFuture;
+  @override
+  void initState() {
+    _controller = VideoPlayerController.asset(video[0]);
+    _initializeVideoPlayerFuture = _controller.initialize();
+    _controller.setLooping(true);
+    _controller.setVolume(1.0);
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -142,6 +169,18 @@ class _HomeWebsiteScreenState extends State<HomeWebsiteScreen> {
                   'ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd',
               color: Colors.grey.shade700,
             ),
+            Container(
+              height: 60,
+              color: Colors.white,
+              child: const Center(
+                  child: Text(
+                'ECUADOR BEAUTIFUL VIEWS ',
+                style: TextStyle(
+                  fontSize: 50,
+                  color: Colors.black,
+                ),
+              )),
+            ),
             const CarouselSliderWidget(),
             const SizedBox(
               height: 10,
@@ -171,6 +210,64 @@ class _HomeWebsiteScreenState extends State<HomeWebsiteScreen> {
               text:
                   'ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd',
               color: Colors.grey.shade700,
+            ),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  height: 160,
+                  width: 160,
+                  decoration: BoxDecoration(
+                      image: DecorationImage(image: AssetImage(images[3]))),
+                ),
+                Container(
+                  height: 250,
+                  width: 250,
+                  decoration: BoxDecoration(
+                      image: DecorationImage(image: AssetImage(images[1]))),
+                ),
+                Container(
+                  height: 200,
+                  width: 200,
+                  decoration: BoxDecoration(
+                      image: DecorationImage(image: AssetImage(images[2]))),
+                ),
+              ],
+            ),
+
+            FutureBuilder(
+                future: _initializeVideoPlayerFuture,
+                builder: (context, snapshot) {
+                  if (snapshot.connectionState == ConnectionState.done) {
+                    return Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 500.0),
+                      child: AspectRatio(
+                        aspectRatio: _controller.value.aspectRatio,
+                        child: VideoPlayer(_controller),
+                      ),
+                    );
+                  } else {
+                    return Center(
+                      child: CircularProgressIndicator(),
+                    );
+                  }
+                }),
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: FloatingActionButton(
+                  onPressed: () {
+                    setState(() {
+                      if (_controller.value.isPlaying) {
+                        _controller.pause();
+                      } else {
+                        _controller.play();
+                      }
+                    });
+                  },
+                  child: Icon(_controller.value.isPlaying
+                      ? Icons.pause
+                      : Icons.play_arrow)),
             ),
 
             /////////////////////////////////////////////////

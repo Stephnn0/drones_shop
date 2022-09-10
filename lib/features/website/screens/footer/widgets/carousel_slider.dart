@@ -61,7 +61,7 @@ class _CarouselSliderWidgetState extends State<CarouselSliderWidget> {
           child: Center(
               child: Text(
             sentences[_current],
-            style: TextStyle(fontSize: 50),
+            style: const TextStyle(fontSize: 50, color: Colors.white),
           )),
         )
       ]),
