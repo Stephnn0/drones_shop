@@ -1,13 +1,25 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
-import 'package:drone_website/features/website/screens/branded/data/image_data.dart';
 import 'package:drone_website/features/website/screens/branded/widgets/bio_text.dart';
-import 'package:drone_website/features/website/screens/branded/widgets/image_cart.dart';
+import 'package:drone_website/features/website/screens/footer/features.dart';
+import 'package:drone_website/features/website/screens/footer/footer.dart';
+import 'package:drone_website/features/website/screens/footer/widgets/carousel_slider.dart';
+import 'package:drone_website/features/website/screens/home/widgets/scroll_view_body.dart';
 import 'package:drone_website/features/website/screens/photography/widgets/duo_square.dart';
 import 'package:drone_website/features/website/widgets/contact_widget.dart';
 import 'package:flutter/material.dart';
 
-class PhotographyScreen extends StatelessWidget {
+class PhotographyScreen extends StatefulWidget {
   const PhotographyScreen({Key? key}) : super(key: key);
+
+  @override
+  State<PhotographyScreen> createState() => _PhotographyScreenState();
+}
+
+class _PhotographyScreenState extends State<PhotographyScreen> {
+  final List<String> images = [
+    'assets/images/youtub(1).png',
+    'assets/images/vegeta(2).png',
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -19,9 +31,8 @@ class PhotographyScreen extends StatelessWidget {
               child: Container(
                 height: 50,
                 width: 50,
-                decoration: const BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage('images/youtub(1).png'))),
+                decoration: BoxDecoration(
+                    image: DecorationImage(image: AssetImage(images[0]))),
               ),
             ),
             title: Container(
@@ -39,7 +50,7 @@ class PhotographyScreen extends StatelessWidget {
                   animatedTexts: [
                     TypewriterAnimatedText(
                         '         GET IN TOUCH           SOCIAL MEDIA OR CONTACT INFORMATION               786 315 7771                PITAJAYADRONES@GMAIL.COM                  MIAMI | ECUADOR         ',
-                        textStyle: TextStyle(
+                        textStyle: const TextStyle(
                             color: Colors.black,
                             fontSize: 20,
                             fontWeight: FontWeight.bold)),
@@ -49,9 +60,8 @@ class PhotographyScreen extends StatelessWidget {
               Container(
                 height: 90,
                 width: 90,
-                decoration: const BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage('images/vegeta(2).png'))),
+                decoration: BoxDecoration(
+                    image: DecorationImage(image: AssetImage(images[1]))),
               ),
             ]),
         backgroundColor: Colors.black,
@@ -60,7 +70,7 @@ class PhotographyScreen extends StatelessWidget {
             children: [
               ////////////////////////////////////////////////////////////////////////////////////////////////////////
               Center(
-                child: Container(
+                child: SizedBox(
                     width: double.infinity,
                     child: Image(
                         fit: BoxFit.cover,
@@ -68,6 +78,8 @@ class PhotographyScreen extends StatelessWidget {
               ),
               ////////////////////////////////////////////////////////////////////////////////////////////////////////
               BioText(
+                text:
+                    'Produce high-quality content with the state-of-the-art equipment with our high-tech drone team. Our talented production studio are always at the ready with a full inventory of professional-grade equipment. We are ready to help out develop, produce and have a massive impact in any type of industry ',
                 color: Colors.grey.shade700,
               ),
               const SizedBox(
@@ -75,44 +87,44 @@ class PhotographyScreen extends StatelessWidget {
               ),
 
               Container(
-                height: 1630,
+                height: 1030,
                 child: ListView.builder(
                     itemCount: 1,
                     scrollDirection: Axis.horizontal,
                     itemBuilder: (context, index) {
-                      return DuoSquare();
+                      return const DuoSquare();
                     }),
               ),
-              BioText(
-                color: Colors.grey.shade700,
-              ),
-              const SizedBox(
-                height: 10,
+
+              const CarouselSliderWidget(),
+              Container(
+                height: 50,
+                color: Colors.black,
               ),
 
               Container(
-                height: 1630,
+                height: 1030,
                 child: ListView.builder(
                     itemCount: 1,
                     scrollDirection: Axis.horizontal,
                     itemBuilder: (context, index) {
-                      return DuoSquare();
+                      return const DuoSquare();
                     }),
               ),
-              BioText(
-                color: Colors.grey.shade700,
-              ),
-              const SizedBox(
-                height: 10,
+
+              const CarouselSliderWidget(),
+              Container(
+                height: 50,
+                color: Colors.black,
               ),
 
               Container(
-                height: 1630,
+                height: 1030,
                 child: ListView.builder(
                     itemCount: 1,
                     scrollDirection: Axis.horizontal,
                     itemBuilder: (context, index) {
-                      return DuoSquare();
+                      return const DuoSquare();
                     }),
               ),
 
@@ -135,10 +147,25 @@ class PhotographyScreen extends StatelessWidget {
                 height: 60,
               ),
 
-              ContactWidget(),
+              const ContactWidget(),
               const SizedBox(
                 height: 50,
               ),
+              Container(
+                height: 60,
+                color: Colors.white,
+                child: const Center(
+                    child: Text(
+                  "YOU CAN FIND US IN INSTAGRAM AS @PITAJAYA_DRONES",
+                  style: TextStyle(
+                    fontSize: 50,
+                    color: Colors.black,
+                  ),
+                )),
+              ),
+              const ScrollViewBody(),
+              const FeaturesWidget(),
+              const FooterWidget()
             ],
           ),
         ));

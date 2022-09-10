@@ -12,6 +12,9 @@ class BrandedContent extends StatelessWidget {
 
   final List<String> images = [
     'assets/images/res.jpg',
+    'assets/images/youtub(1).png',
+    'assets/images/isss(1).png',
+    'assets/images/casa.jpg',
   ];
 
   @override
@@ -23,9 +26,8 @@ class BrandedContent extends StatelessWidget {
             child: Container(
               height: 50,
               width: 50,
-              decoration: const BoxDecoration(
-                  image: DecorationImage(
-                      image: AssetImage('images/youtub(1).png'))),
+              decoration: BoxDecoration(
+                  image: DecorationImage(image: AssetImage(images[1]))),
             ),
           ),
           title: Container(
@@ -55,9 +57,8 @@ class BrandedContent extends StatelessWidget {
               child: Container(
                 height: 50,
                 width: 50,
-                decoration: const BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage('images/isss(1).png'))),
+                decoration: BoxDecoration(
+                    image: DecorationImage(image: AssetImage(images[2]))),
               ),
             ),
           ],
@@ -86,8 +87,13 @@ class BrandedContent extends StatelessWidget {
                 height: 10,
               ),
               ///////////////////////////////////////////////////////////////////////////////////////////////////////
-              const BioText(
-                color: Colors.black,
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: BioText(
+                  text:
+                      'Branded Content is Digital Video Entertainment aimed specifically for brands, designed to develop high quality media productions while connecting withaudiences on an emotional level.',
+                  color: Colors.black,
+                ),
               ),
               /////////////////////////////////////////////////////////////////////////////////////////////////////
               const SizedBox(
@@ -99,7 +105,7 @@ class BrandedContent extends StatelessWidget {
                 iconcolor: Colors.white,
                 icon: Icons.home,
                 description:
-                    'Enterprise Photography provides expertise in all areas of architectural photography and has worked with many industry professionals including international construction groups, renowned architects, property developers, luxury property realtors, landscape designers and residential owners. EP has also been featured in online and print publications showcasing beautiful feats of architecture and design.',
+                    'When creating branded content we believe it is integral to fully understand your target audience. This involves getting to know the demographics and psychographics of your audience which may include their lifestyle choices, social media preferences and attitudes towards ethical issues. ',
                 title: 'ARCHITECTURE',
                 color1: Colors.black,
                 color2: Colors.black,
@@ -112,7 +118,7 @@ class BrandedContent extends StatelessWidget {
                 iconcolor: Colors.black,
                 icon: Icons.construction,
                 description:
-                    'Enterprise Photography provides expertise in all areas of architectural photography and has worked with many industry professionals including international construction groups, renowned architects, property developers, luxury property realtors, landscape designers and residential owners. EP has also been featured in online and print publications showcasing beautiful feats of architecture and design.',
+                    'Branded content that is in line with your values and your audience values. We help you build a positive brand perception that will make you build trust and credibility with your audience. We develop closer customer relationships with the intent to evoke emotions with your branded content.',
                 title: 'ARCHITECTURE',
                 color1: Colors.white,
                 color2: Colors.white,
@@ -127,17 +133,17 @@ class BrandedContent extends StatelessWidget {
                 height: 10,
               ),
               /////////////////////////////////////////////////////////////////////////////////////////////////////
-              const MultipleContainer(
+              MultipleContainer(
                 titlecolor: Colors.white,
                 iconcolor: Colors.white,
                 icon: Icons.home,
                 description:
-                    'Enterprise Photography provides expertise in all areas of architectural photography and has worked with many industry professionals including international construction groups, renowned architects, property developers, luxury property realtors, landscape designers and residential owners. EP has also been featured in online and print publications showcasing beautiful feats of architecture and design.',
+                    'Our years of experience has allow us to develop content that is most successful and powerful when it comes to creating stories to tell. By crafting a good narrative we will create  chemistry with your audience, connect with them on a deeper level and create content that sticks in their minds',
                 title: 'ARCHITECTURE',
                 color1: Colors.black,
                 color2: Colors.black,
                 color3: Colors.black,
-                colordescription: Colors.white,
+                colordescription: Colors.grey.shade700,
               ),
               /////////////////////////////////////////////////////////////////////////////////////////////////////
               const MultipleContainer(
@@ -145,12 +151,12 @@ class BrandedContent extends StatelessWidget {
                 iconcolor: Colors.black,
                 icon: Icons.construction,
                 description:
-                    'Enterprise Photography provides expertise in all areas of architectural photography and has worked with many industry professionals including international construction groups, renowned architects, property developers, luxury property realtors, landscape designers and residential owners. EP has also been featured in online and print publications showcasing beautiful feats of architecture and design.',
+                    'We help you develop closer customer relationships with the intent to evoke emotions with your branded content. You can also provide clear milestones throughout the production to determine if and where your team has to go back and make changes.',
                 title: 'ARCHITECTURE',
                 color1: Colors.white,
                 color2: Colors.white,
                 color3: Colors.white,
-                colordescription: Colors.black,
+                colordescription: Colors.white,
               ),
               /////////////////////////////////////////////////////////////////////////////////////////////////////
               const SizedBox(
@@ -179,7 +185,7 @@ class BrandedContent extends StatelessWidget {
                   borderRadius: BorderRadius.circular(8),
                 ),
                 child: Column(
-                  children: [
+                  children: const [
                     WorkExperience(
                       image1: 'images/fox.png',
                       image2: 'images/disney.png',

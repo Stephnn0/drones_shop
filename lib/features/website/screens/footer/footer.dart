@@ -286,7 +286,11 @@ class FooterWidget extends StatelessWidget {
             ),
             Row(
               children: const [
-                Text(' Category', style: TextStyle(color: Colors.white)),
+                Text(' Home', style: TextStyle(color: Colors.white)),
+                SizedBox(
+                  width: 20,
+                ),
+                Text('Content ', style: TextStyle(color: Colors.white)),
                 SizedBox(
                   width: 20,
                 ),
@@ -294,23 +298,19 @@ class FooterWidget extends StatelessWidget {
                 SizedBox(
                   width: 20,
                 ),
-                Text('Products ', style: TextStyle(color: Colors.white)),
+                Text('Photography', style: TextStyle(color: Colors.white)),
                 SizedBox(
                   width: 20,
                 ),
-                Text('Products', style: TextStyle(color: Colors.white)),
-                SizedBox(
-                  width: 20,
-                ),
-                Text('Products ', style: TextStyle(color: Colors.white)),
+                Text('Production  ', style: TextStyle(color: Colors.white)),
                 SizedBox(
                   height: 20,
                 ),
-                Text('Products', style: TextStyle(color: Colors.white)),
+                Text('  Studios', style: TextStyle(color: Colors.white)),
                 SizedBox(
                   width: 20,
                 ),
-                Text('Products', style: TextStyle(color: Colors.white)),
+                Text('About', style: TextStyle(color: Colors.white)),
               ],
             ),
             const SizedBox(

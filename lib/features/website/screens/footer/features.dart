@@ -15,7 +15,7 @@ class FeaturesWidget extends StatelessWidget {
             Column(
               children: [
                 Icon(
-                  Icons.camera_alt_outlined,
+                  Icons.shopping_cart_checkout_outlined,
                   size: 60,
                   color: Colors.grey.shade700,
                 ),
@@ -63,7 +63,7 @@ class FeaturesWidget extends StatelessWidget {
             Column(
               children: [
                 Icon(
-                  Icons.post_add_outlined,
+                  Icons.camera_alt_outlined,
                   size: 60,
                   color: Colors.grey.shade700,
                 ),

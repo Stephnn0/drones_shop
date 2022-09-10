@@ -61,7 +61,7 @@ class GalleryScreen extends StatelessWidget {
               animatedTexts: [
                 TypewriterAnimatedText(
                     '         GET IN TOUCH           SOCIAL MEDIA OR CONTACT INFORMATION               786 315 7771                PITAJAYADRONES@GMAIL.COM                  MIAMI | ECUADOR         ',
-                    textStyle: TextStyle(
+                    textStyle: const TextStyle(
                         color: Colors.black,
                         fontSize: 20,
                         fontWeight: FontWeight.bold)),
@@ -85,6 +85,8 @@ class GalleryScreen extends StatelessWidget {
             subtitle: "PHOTOGRAPHY PRODUCTIONS",
           ),
           BioText(
+            text:
+                'Video marketing for real estate is a highly relevant marketing asset when selling property. The benefits include offering a virtual tour that is captured on your smartphone, an overall look at the property that is shot on a drone, or a detailed look as a slideshow. Videos are a great way to showcase your property and every detail about it in a way that photos cannot do.',
             color: Colors.grey.shade700,
           ),
           const SizedBox(
@@ -95,7 +97,7 @@ class GalleryScreen extends StatelessWidget {
             iconcolor: Colors.white,
             icon: Icons.home,
             description:
-                'Enterprise Photography provides expertise in all areas of architectural photography and has worked with many industry professionals including international construction groups, renowned architects, property developers, luxury property realtors, landscape designers and residential owners. EP has also been featured in online and print publications showcasing beautiful feats of architecture and design.',
+                'Our real estate video production team brings luxury properties to life with the highest-quality HD digital videos edited for web, mobile, social media and more. We use only the latest pro digital cinema technology, stabilization tools and exciting editing techniques to create video content that can seduce luxury-minded audiences and elevate your distance-selling chances. ',
             title: 'ARCHITECTURE',
             color1: Colors.black,
             color2: Colors.black,
@@ -107,7 +109,7 @@ class GalleryScreen extends StatelessWidget {
             iconcolor: Colors.black,
             icon: Icons.construction,
             description:
-                'Enterprise Photography provides expertise in all areas of architectural photography and has worked with many industry professionals including international construction groups, renowned architects, property developers, luxury property realtors, landscape designers and residential owners. EP has also been featured in online and print publications showcasing beautiful feats of architecture and design.',
+                'Video marketing has become a vital part of any business sector in the last decade and has become highly popular in real estate. As a result, websites with video content are seeing an increase in search results, which is why their properties are getting sold quickly.',
             title: 'ARCHITECTURE',
             color1: Colors.white,
             color2: Colors.white,
@@ -125,7 +127,7 @@ class GalleryScreen extends StatelessWidget {
             iconcolor: Colors.white,
             icon: Icons.home,
             description:
-                'Enterprise Photography provides expertise in all areas of architectural photography and has worked with many industry professionals including international construction groups, renowned architects, property developers, luxury property realtors, landscape designers and residential owners. EP has also been featured in online and print publications showcasing beautiful feats of architecture and design.',
+                'Video is one of the influential assets that assist you in selling more property. What makes video so powerful is its flexibility and reach. You can place videos on websites, email campaigns, social media sites, YouTube, etc. But that does not imply that you have to make a double effort to make them. Instead, make it once and then repurpose it to obtain the maximum mileage out of it.',
             title: 'ARCHITECTURE',
             color1: Colors.black,
             color2: Colors.black,
@@ -137,7 +139,7 @@ class GalleryScreen extends StatelessWidget {
             iconcolor: Colors.black,
             icon: Icons.construction,
             description:
-                'Enterprise Photography provides expertise in all areas of architectural photography and has worked with many industry professionals including international construction groups, renowned architects, property developers, luxury property realtors, landscape designers and residential owners. EP has also been featured in online and print publications showcasing beautiful feats of architecture and design.',
+                'Our creative team of real estate listing video makers serve owners and brokers of residential and commercial properties and bring expertise to every dimension of real estate video production. We look for the sweet spot where creative success meets cost-efficiency to give you the best product you can afford. This can range from a single-cam walkthrough to an immersive, scripted film complete with actors, 3D effects, motion graphics, original music and multi-cam real estate photography.',
             title: 'ARCHITECTURE',
             color1: Colors.white,
             color2: Colors.white,
@@ -277,6 +279,18 @@ class GalleryScreen extends StatelessWidget {
           const ContactWidget(),
           const SizedBox(
             height: 100,
+          ),
+          Container(
+            height: 60,
+            color: Colors.white,
+            child: const Center(
+                child: Text(
+              "CALL TO ACTION @PITAJAYA_DRONES",
+              style: TextStyle(
+                fontSize: 50,
+                color: Colors.black,
+              ),
+            )),
           ),
           const ScrollViewBody(),
           const FeaturesWidget(),

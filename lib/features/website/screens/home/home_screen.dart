@@ -42,7 +42,7 @@ class _HomeWebsiteScreenState extends State<HomeWebsiteScreen> {
                 repeatForever: false,
                 animatedTexts: [
                   TypewriterAnimatedText(
-                      ' PITAJAYA DRONE STUDIOS            EXCLUSIVE MEDIA SERVICES           VIDEO & PHOTOGRAPHY PRODUCTIONS             REAL ESTATE AERIAL PROJECTS                    ',
+                      '   PITAJAYA DRONE STUDIOS               EXCLUSIVE MEDIA SERVICES                VIDEO & PHOTOGRAPHY PRODUCTIONS             REAL ESTATE AERIAL PROJECTS           ',
                       textStyle: const TextStyle(
                           color: Colors.black,
                           fontSize: 20,
@@ -92,36 +92,6 @@ class _HomeWebsiteScreenState extends State<HomeWebsiteScreen> {
               Center(
                 child: Image(image: AssetImage(images[0])),
               ),
-              //const ImageStack(),
-
-              // Padding(
-              //   padding: const EdgeInsets.all(20.0),
-              //   child: Container(
-              //     decoration: BoxDecoration(
-              //         color: Colors.black,
-              //         borderRadius: BorderRadius.circular(16)),
-              //     child: AnimatedTextKit(repeatForever: true, animatedTexts: [
-              //       TypewriterAnimatedText(
-              //           'Enjoy next-level comfort and convenience with DJI Goggles 2. ',
-              //           textStyle: const TextStyle(
-              //               color: Colors.white,
-              //               fontSize: 50,
-              //               fontWeight: FontWeight.bold)),
-              //       TypewriterAnimatedText(
-              //           'its design was made for you to be bold.',
-              //           textStyle: const TextStyle(
-              //               color: Colors.white,
-              //               fontSize: 50,
-              //               fontWeight: FontWeight.bold)),
-              //       TypewriterAnimatedText('PITAJAYA DRONE STUDIOS...',
-              //           textStyle: const TextStyle(
-              //               color: Colors.white,
-              //               //Color.fromARGB(255, 255, 182, 11),
-              //               fontSize: 50,
-              //               fontWeight: FontWeight.bold))
-              //     ]),
-              //   ),
-              // ),
             ]),
             const SizedBox(
               height: 30,
@@ -136,11 +106,21 @@ class _HomeWebsiteScreenState extends State<HomeWebsiteScreen> {
               )),
             ),
             BioText(
+              text:
+                  'dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd',
               color: Colors.grey.shade700,
             ),
             Container(
-              height: 50,
+              height: 60,
               color: Colors.white,
+              child: const Center(
+                  child: Text(
+                'MIAMI VIBES  ',
+                style: TextStyle(
+                  fontSize: 50,
+                  color: Colors.black,
+                ),
+              )),
             ),
             const CarouselSliderWidget(),
             Container(
@@ -148,6 +128,8 @@ class _HomeWebsiteScreenState extends State<HomeWebsiteScreen> {
               color: Colors.black,
             ),
             BioText(
+              text:
+                  'dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd',
               color: Colors.grey.shade700,
             ),
             const CarouselSliderWidget(),
@@ -156,6 +138,8 @@ class _HomeWebsiteScreenState extends State<HomeWebsiteScreen> {
               color: Colors.black,
             ),
             BioText(
+              text:
+                  'ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd',
               color: Colors.grey.shade700,
             ),
             const CarouselSliderWidget(),
@@ -184,6 +168,8 @@ class _HomeWebsiteScreenState extends State<HomeWebsiteScreen> {
             // ),
 
             BioText(
+              text:
+                  'ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd',
               color: Colors.grey.shade700,
             ),
 

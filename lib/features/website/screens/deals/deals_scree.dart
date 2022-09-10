@@ -1,8 +1,5 @@
 import 'package:drone_website/features/website/screens/branded/data/image_data.dart';
 import 'package:drone_website/features/website/screens/branded/widgets/image_cart.dart';
-import 'package:drone_website/features/website/screens/footer/features.dart';
-import 'package:drone_website/features/website/screens/footer/footer.dart';
-import 'package:drone_website/features/website/screens/home/home_screen.dart';
 import 'package:flutter/material.dart';
 
 class DealsScreen extends StatelessWidget {
