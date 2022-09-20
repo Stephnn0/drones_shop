@@ -268,7 +268,7 @@ class GalleryScreen extends StatelessWidget {
                 child: Text(
               "CONTACT US! ",
               style: TextStyle(
-                  fontSize: 50,
+                  fontSize: 70,
                   color: Colors.black,
                   fontWeight: FontWeight.bold),
             )),
@@ -281,19 +281,11 @@ class GalleryScreen extends StatelessWidget {
             height: 100,
           ),
           Container(
-            height: 60,
+            height: 20,
             color: Colors.white,
-            child: const Center(
-                child: Text(
-              "CALL TO ACTION @PITAJAYA_DRONES",
-              style: TextStyle(
-                fontSize: 50,
-                color: Colors.black,
-              ),
-            )),
           ),
-          const ScrollViewBody(),
-          const FeaturesWidget(),
+          // const ScrollViewBody(),
+          // const FeaturesWidget(),
           const FooterWidget()
         ],
       )),

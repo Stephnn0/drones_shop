@@ -5,6 +5,7 @@ import 'package:drone_website/features/website/screens/branded/widgets/work_expe
 import 'package:drone_website/features/website/screens/footer/features.dart';
 import 'package:drone_website/features/website/screens/footer/footer.dart';
 import 'package:drone_website/features/website/screens/real_state/widgets/image_stack.dart';
+import 'package:drone_website/features/website/widgets/contact_widget.dart';
 import 'package:flutter/material.dart';
 
 class BrandedContent extends StatelessWidget {
@@ -216,14 +217,46 @@ class BrandedContent extends StatelessWidget {
                   ],
                 ),
               ),
+              // Container(
+              //   height: 190,
+              //   width: 190,
+              //   decoration: BoxDecoration(
+              //       image: DecorationImage(image: AssetImage(images[4]))),
+              // ),
               /////////////////////////////////////////////////////////////////////////////////////////////////////
-              const SizedBox(
-                height: 70,
-              ),
+              // const SizedBox(
+              //   height: 70,
+              // ),
 
-              const FeaturesWidget(),
+              // const FeaturesWidget(),
+              // const SizedBox(
+              //   height: 10,
+              // ),
               const SizedBox(
-                height: 10,
+                height: 60,
+              ),
+              Container(
+                height: 100,
+                color: Colors.grey.shade200,
+                child: const Center(
+                    child: Text(
+                  "CONTACT US! ",
+                  style: TextStyle(
+                      fontSize: 70,
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold),
+                )),
+              ),
+              const SizedBox(
+                height: 60,
+              ),
+              const ContactWidget(),
+              const SizedBox(
+                height: 100,
+              ),
+              Container(
+                height: 20,
+                color: Colors.white,
               ),
               const FooterWidget()
             ],
