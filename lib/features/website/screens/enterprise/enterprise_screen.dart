@@ -139,14 +139,15 @@ class EnterpriseScreen extends StatelessWidget {
             height: 100,
             width: 500,
             decoration: BoxDecoration(
-                color: Colors.grey.shade200,
+                color: Colors.black,
+                border: Border.all(color: Colors.white),
                 borderRadius: BorderRadius.circular(40)),
-            child: const Center(
+            child: Center(
                 child: Text(
               "CONTACT US! ",
               style: TextStyle(
-                  fontSize: 70,
-                  color: Colors.black,
+                  fontSize: 60,
+                  color: Colors.grey.shade400,
                   fontWeight: FontWeight.bold),
             )),
           ),
@@ -158,8 +159,8 @@ class EnterpriseScreen extends StatelessWidget {
             height: 100,
           ),
           Container(
-            height: 20,
-            color: Colors.white,
+            height: 5,
+            color: Colors.grey.shade500,
           ),
           // const ScrollViewBody(),
           // const FeaturesWidget(),

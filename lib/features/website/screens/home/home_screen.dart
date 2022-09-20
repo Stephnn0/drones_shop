@@ -28,27 +28,27 @@ class _HomeWebsiteScreenState extends State<HomeWebsiteScreen> {
     'assets/images/vegeta(2).png',
   ];
 
-  final List<String> video = [
-    'assets/images/video2.mp4',
-  ];
+  // final List<String> video = [
+  //   'assets/images/video2.mp4',
+  // ];
 
-  late VideoPlayerController _controller;
+  // late VideoPlayerController _controller;
 
-  late Future<void> _initializeVideoPlayerFuture;
-  @override
-  void initState() {
-    _controller = VideoPlayerController.asset(video[0]);
-    _initializeVideoPlayerFuture = _controller.initialize();
-    _controller.setLooping(true);
-    _controller.setVolume(1.0);
-    super.initState();
-  }
+  // late Future<void> _initializeVideoPlayerFuture;
+  // @override
+  // void initState() {
+  //   _controller = VideoPlayerController.asset(video[0]);
+  //   _initializeVideoPlayerFuture = _controller.initialize();
+  //   _controller.setLooping(true);
+  //   _controller.setVolume(1.0);
+  //   super.initState();
+  // }
 
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
-  }
+  // @override
+  // void dispose() {
+  //   _controller.dispose();
+  //   super.dispose();
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -228,43 +228,43 @@ class _HomeWebsiteScreenState extends State<HomeWebsiteScreen> {
             //   ],
             // ),
 
-            FutureBuilder(
-                future: _initializeVideoPlayerFuture,
-                builder: (context, snapshot) {
-                  if (snapshot.connectionState == ConnectionState.done) {
-                    return Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 500.0),
-                      child: AspectRatio(
-                        aspectRatio: _controller.value.aspectRatio,
-                        child: VideoPlayer(_controller),
-                      ),
-                    );
-                  } else {
-                    return const Center(
-                      child: CircularProgressIndicator(),
-                    );
-                  }
-                }),
-            Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: FloatingActionButton(
-                  onPressed: () {
-                    setState(() {
-                      if (_controller.value.isPlaying) {
-                        _controller.pause();
-                      } else {
-                        _controller.play();
-                      }
-                    });
-                  },
-                  child: Icon(_controller.value.isPlaying
-                      ? Icons.pause
-                      : Icons.play_arrow)),
-            ),
-            Container(
-              height: 50,
-              color: Colors.black,
-            ),
+            // FutureBuilder(
+            //     future: _initializeVideoPlayerFuture,
+            //     builder: (context, snapshot) {
+            //       if (snapshot.connectionState == ConnectionState.done) {
+            //         return Padding(
+            //           padding: const EdgeInsets.symmetric(horizontal: 500.0),
+            //           child: AspectRatio(
+            //             aspectRatio: _controller.value.aspectRatio,
+            //             child: VideoPlayer(_controller),
+            //           ),
+            //         );
+            //       } else {
+            //         return const Center(
+            //           child: CircularProgressIndicator(),
+            //         );
+            //       }
+            //     }),
+            // Padding(
+            //   padding: const EdgeInsets.all(16.0),
+            //   child: FloatingActionButton(
+            //       onPressed: () {
+            //         setState(() {
+            //           if (_controller.value.isPlaying) {
+            //             _controller.pause();
+            //           } else {
+            //             _controller.play();
+            //           }
+            //         });
+            //       },
+            //       child: Icon(_controller.value.isPlaying
+            //           ? Icons.pause
+            //           : Icons.play_arrow)),
+            // ),
+            // Container(
+            //   height: 50,
+            //   color: Colors.black,
+            // ),
             // BioText(
             //   text:
             //       'Our years of experience has allow us to develop content that is most successful and powerful when it comes to creating stories to tell. By crafting a good narrative we will create  chemistry with your audience, connect with them on a deeper level and create content that sticks in their minds',
@@ -283,14 +283,15 @@ class _HomeWebsiteScreenState extends State<HomeWebsiteScreen> {
               height: 100,
               width: 500,
               decoration: BoxDecoration(
-                  color: Colors.grey.shade200,
+                  color: Colors.black,
+                  border: Border.all(color: Colors.white),
                   borderRadius: BorderRadius.circular(40)),
-              child: const Center(
+              child: Center(
                   child: Text(
                 "CONTACT US! ",
                 style: TextStyle(
-                    fontSize: 70,
-                    color: Colors.black,
+                    fontSize: 60,
+                    color: Colors.grey.shade400,
                     fontWeight: FontWeight.bold),
               )),
             ),
@@ -302,8 +303,8 @@ class _HomeWebsiteScreenState extends State<HomeWebsiteScreen> {
               height: 100,
             ),
             Container(
-              height: 20,
-              color: Colors.white,
+              height: 5,
+              color: Colors.grey.shade500,
             ),
             const FooterWidget()
           ],

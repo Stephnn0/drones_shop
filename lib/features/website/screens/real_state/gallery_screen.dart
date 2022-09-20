@@ -24,54 +24,54 @@ class GalleryScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Container(
-            height: 50,
-            width: 50,
-            decoration: BoxDecoration(
-                image: DecorationImage(image: AssetImage(images[0]))),
-          ),
-        ),
+      // appBar: AppBar(
+      //   leading: Padding(
+      //     padding: const EdgeInsets.all(8.0),
+      //     child: Container(
+      //       height: 50,
+      //       width: 50,
+      //       decoration: BoxDecoration(
+      //           image: DecorationImage(image: AssetImage(images[0]))),
+      //     ),
+      //   ),
 
-        actions: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Container(
-              height: 50,
-              width: 50,
-              decoration: BoxDecoration(
-                  image: DecorationImage(image: AssetImage(images[1]))),
-            ),
-          ),
-        ],
-        title: Container(
-          height: 25,
-          decoration: BoxDecoration(
-            // color: Colors.grey.shade300,
-            color: Colors.white,
-            // Colors.grey.shade300,
+      //   actions: [
+      //     Padding(
+      //       padding: const EdgeInsets.all(8.0),
+      //       child: Container(
+      //         height: 50,
+      //         width: 50,
+      //         decoration: BoxDecoration(
+      //             image: DecorationImage(image: AssetImage(images[1]))),
+      //       ),
+      //     ),
+      //   ],
+      //   title: Container(
+      //     height: 25,
+      //     decoration: BoxDecoration(
+      //       // color: Colors.grey.shade300,
+      //       color: Colors.white,
+      //       // Colors.grey.shade300,
 
-            borderRadius: BorderRadius.circular(5),
-          ),
-          child: AnimatedTextKit(
-              totalRepeatCount: 1,
-              repeatForever: false,
-              animatedTexts: [
-                TypewriterAnimatedText(
-                    '         GET IN TOUCH           SOCIAL MEDIA OR CONTACT INFORMATION               786 315 7771                PITAJAYADRONES@GMAIL.COM                  MIAMI | ECUADOR         ',
-                    textStyle: const TextStyle(
-                        color: Colors.black,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold)),
-              ]),
-        ),
+      //       borderRadius: BorderRadius.circular(5),
+      //     ),
+      //     child: AnimatedTextKit(
+      //         totalRepeatCount: 1,
+      //         repeatForever: false,
+      //         animatedTexts: [
+      //           TypewriterAnimatedText(
+      //               '         GET IN TOUCH           SOCIAL MEDIA OR CONTACT INFORMATION               786 315 7771                PITAJAYADRONES@GMAIL.COM                  MIAMI | ECUADOR         ',
+      //               textStyle: const TextStyle(
+      //                   color: Colors.black,
+      //                   fontSize: 20,
+      //                   fontWeight: FontWeight.bold)),
+      //         ]),
+      //   ),
 
-        //  const Text('PITAJAYA DRONE STUDIOS'),
-        automaticallyImplyLeading: true,
-        backgroundColor: Colors.black,
-      ),
+      //   //  const Text('PITAJAYA DRONE STUDIOS'),
+      //   automaticallyImplyLeading: true,
+      //   backgroundColor: Colors.black,
+      // ),
       backgroundColor: Colors.black,
       // Colors.grey.shade200,
       ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -254,14 +254,15 @@ class GalleryScreen extends StatelessWidget {
             height: 100,
             width: 500,
             decoration: BoxDecoration(
-                color: Colors.grey.shade200,
+                color: Colors.black,
+                border: Border.all(color: Colors.white),
                 borderRadius: BorderRadius.circular(40)),
-            child: const Center(
+            child: Center(
                 child: Text(
               "CONTACT US! ",
               style: TextStyle(
-                  fontSize: 70,
-                  color: Colors.black,
+                  fontSize: 60,
+                  color: Colors.grey.shade400,
                   fontWeight: FontWeight.bold),
             )),
           ),
@@ -273,8 +274,8 @@ class GalleryScreen extends StatelessWidget {
             height: 100,
           ),
           Container(
-            height: 20,
-            color: Colors.white,
+            height: 5,
+            color: Colors.grey.shade500,
           ),
           // const ScrollViewBody(),
           // const FeaturesWidget(),

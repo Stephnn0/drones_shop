@@ -28,15 +28,28 @@ class _PhotographyScreenState extends State<PhotographyScreen> {
     'assets/images/video.mp4',
   ];
 
+  final List<String> video1 = [
+    'assets/images/video2.mp4',
+  ];
+
   late VideoPlayerController _controller;
+  late VideoPlayerController _controllerone;
 
   late Future<void> _initializeVideoPlayerFuture;
+  late Future<void> _initializeVideo1PlayerFuture;
+
   @override
   void initState() {
     _controller = VideoPlayerController.asset(video[0]);
     _initializeVideoPlayerFuture = _controller.initialize();
     _controller.setLooping(true);
     _controller.setVolume(1.0);
+
+    ///
+    _controllerone = VideoPlayerController.asset(video1[0]);
+    _initializeVideo1PlayerFuture = _controllerone.initialize();
+    _controllerone.setLooping(true);
+    _controllerone.setVolume(1.0);
     super.initState();
   }
 
@@ -210,35 +223,94 @@ class _PhotographyScreenState extends State<PhotographyScreen> {
                 height: 50,
                 color: Colors.black,
               ),
-
-              // Container(
-              //   height: 1030,
-              //   child: ListView.builder(
-              //       itemCount: 1,
-              //       scrollDirection: Axis.horizontal,
-              //       itemBuilder: (context, index) {
-              //         return const DuoSquare();
-              //       }),
-              // ),
-
-              // const SizedBox(
-              //   height: 60,
-              // ),
+              Container(
+                height: 5,
+                color: Colors.grey.shade500,
+              ),
+              const SizedBox(
+                height: 30,
+              ),
               Container(
                 height: 100,
                 width: 500,
                 decoration: BoxDecoration(
-                    color: Colors.grey.shade200,
+                    color: Colors.black,
+                    border: Border.all(color: Colors.white),
                     borderRadius: BorderRadius.circular(40)),
-                child: const Center(
+                child: Center(
                     child: Text(
                   "CONTACT US! ",
                   style: TextStyle(
-                      fontSize: 70,
-                      color: Colors.black,
+                      fontSize: 60,
+                      color: Colors.grey.shade400,
                       fontWeight: FontWeight.bold),
                 )),
               ),
+              const SizedBox(
+                height: 30,
+              ),
+              // BioText(
+              //   text:
+              //       'Produce high-quality content with the state-of-the-art equipment with our high-tech drone team.',
+              //   color: Colors.grey.shade700,
+              // ),
+              const SizedBox(
+                height: 30,
+              ),
+              FutureBuilder(
+                  future: _initializeVideo1PlayerFuture,
+                  builder: (context, snapshot) {
+                    if (snapshot.connectionState == ConnectionState.done) {
+                      return Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 500.0),
+                        child: AspectRatio(
+                          aspectRatio: _controllerone.value.aspectRatio,
+                          child: VideoPlayer(_controllerone),
+                        ),
+                      );
+                    } else {
+                      return const Center(
+                        child: CircularProgressIndicator(),
+                      );
+                    }
+                  }),
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: FloatingActionButton(
+                    onPressed: () {
+                      setState(() {
+                        if (_controllerone.value.isPlaying) {
+                          _controllerone.pause();
+                        } else {
+                          _controllerone.play();
+                        }
+                      });
+                    },
+                    child: Icon(_controllerone.value.isPlaying
+                        ? Icons.pause
+                        : Icons.play_arrow)),
+              ),
+              // Container(
+              //   height: 50,
+              //   color: Colors.black,
+              // ),
+
+              // Container(
+              //   height: 100,
+              //   width: 500,
+              //   decoration: BoxDecoration(
+              //       color: Colors.black,
+              //       border: Border.all(color: Colors.white),
+              //       borderRadius: BorderRadius.circular(40)),
+              //   child: Center(
+              //       child: Text(
+              //     "CONTACT US! ",
+              //     style: TextStyle(
+              //         fontSize: 60,
+              //         color: Colors.grey.shade400,
+              //         fontWeight: FontWeight.bold),
+              //   )),
+              // ),
               const SizedBox(
                 height: 60,
               ),
@@ -262,8 +334,8 @@ class _PhotographyScreenState extends State<PhotographyScreen> {
               //const ScrollViewBody(),
               // const FeaturesWidget(),
               Container(
-                height: 20,
-                color: Colors.white,
+                height: 5,
+                color: Colors.grey.shade500,
               ),
               const FooterWidget()
             ],
