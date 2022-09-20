@@ -82,7 +82,7 @@ class GalleryScreen extends StatelessWidget {
           ImageStack(
             image: images[2],
             title: "REAL ESTATE",
-            subtitle: "PHOTOGRAPHY PRODUCTIONS",
+            subtitle: "VIDEO-DRONE PRODUCTIONS",
           ),
           BioText(
             text:
@@ -104,48 +104,37 @@ class GalleryScreen extends StatelessWidget {
             color3: Colors.black,
             colordescription: Colors.white,
           ),
+          // const MultipleContainer(
+          //   titlecolor: Colors.black,
+          //   iconcolor: Colors.black,
+          //   icon: Icons.construction,
+          //   description:
+          //       'Video marketing has become a vital part of any business sector in the last decade and has become highly popular in real estate. As a result, websites with video content are seeing an increase in search results, which is why their properties are getting sold quickly.',
+          //   title: 'PRODUCTIONS',
+          //   color1: Colors.white,
+          //   color2: Colors.white,
+          //   color3: Colors.white,
+          //   colordescription: Colors.black,
+          // ),
+          // const SizedBox(
+          //   height: 10,
+          // ),
+          const SizedBox(
+            height: 10,
+          ),
           const MultipleContainer(
             titlecolor: Colors.black,
             iconcolor: Colors.black,
-            icon: Icons.construction,
-            description:
-                'Video marketing has become a vital part of any business sector in the last decade and has become highly popular in real estate. As a result, websites with video content are seeing an increase in search results, which is why their properties are getting sold quickly.',
-            title: 'PRODUCTIONS',
-            color1: Colors.white,
-            color2: Colors.white,
-            color3: Colors.white,
-            colordescription: Colors.black,
-          ),
-          const SizedBox(
-            height: 10,
-          ),
-          const SizedBox(
-            height: 10,
-          ),
-          const MultipleContainer(
-            titlecolor: Colors.white,
-            iconcolor: Colors.white,
             icon: Icons.subscriptions_outlined,
             description:
-                'Video is one of the influential assets that assist you in selling more property. What makes video so powerful is its flexibility and reach. You can place videos on websites, email campaigns, social media sites, YouTube, etc. But that does not imply that you have to make a double effort to make them. Instead, make it once and then repurpose it to obtain the maximum mileage out of it.',
-            title: 'COMMERCIAL AND BUSINESS VIRTUAL TOURS',
-            color1: Colors.black,
-            color2: Colors.black,
-            color3: Colors.black,
-            colordescription: Colors.white,
-          ),
-          const MultipleContainer(
-            titlecolor: Colors.black,
-            iconcolor: Colors.black,
-            icon: Icons.video_collection,
-            description:
                 'Our creative team of real estate listing video makers serve owners and brokers of residential and commercial properties and bring expertise to every dimension of real estate video production. We look for the sweet spot where creative success meets cost-efficiency to give you the best product you can afford. This can range from a single-cam walkthrough to an immersive, scripted film complete with actors, 3D effects, motion graphics, original music and multi-cam real estate photography.',
-            title: 'VIRTUAL STAGING',
+            title: 'COMMERCIAL AND BUSINESS VIRTUAL TOURS',
             color1: Colors.white,
             color2: Colors.white,
             color3: Colors.white,
             colordescription: Colors.black,
           ),
+
           const SizedBox(
             height: 10,
           ),
@@ -263,7 +252,10 @@ class GalleryScreen extends StatelessWidget {
           ),
           Container(
             height: 100,
-            color: Colors.grey.shade200,
+            width: 500,
+            decoration: BoxDecoration(
+                color: Colors.grey.shade200,
+                borderRadius: BorderRadius.circular(40)),
             child: const Center(
                 child: Text(
               "CONTACT US! ",

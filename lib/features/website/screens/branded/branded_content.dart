@@ -233,11 +233,14 @@ class BrandedContent extends StatelessWidget {
               //   height: 10,
               // ),
               const SizedBox(
-                height: 60,
+                height: 80,
               ),
               Container(
                 height: 100,
-                color: Colors.grey.shade200,
+                width: 500,
+                decoration: BoxDecoration(
+                    color: Colors.grey.shade200,
+                    borderRadius: BorderRadius.circular(40)),
                 child: const Center(
                     child: Text(
                   "CONTACT US! ",

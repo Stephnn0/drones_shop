@@ -143,7 +143,7 @@ class _HomeWebsiteScreenState extends State<HomeWebsiteScreen> {
               padding: const EdgeInsets.all(8.0),
               child: BioText(
                 text:
-                    'Branded Content is Digital Video Entertainment aimed specifically for brands, designed to develop high quality media productions while connecting withaudiences on an emotional level.',
+                    'Video marketing has become a vital part of any business sector in the last decade and has become highly popular in real estate. As a result, websites with video content are seeing an increase in search results, which is why their properties are getting sold quickly.',
                 color: Colors.grey.shade700,
               ),
             ),
@@ -281,7 +281,10 @@ class _HomeWebsiteScreenState extends State<HomeWebsiteScreen> {
             // ),
             Container(
               height: 100,
-              color: Colors.grey.shade200,
+              width: 500,
+              decoration: BoxDecoration(
+                  color: Colors.grey.shade200,
+                  borderRadius: BorderRadius.circular(40)),
               child: const Center(
                   child: Text(
                 "CONTACT US! ",

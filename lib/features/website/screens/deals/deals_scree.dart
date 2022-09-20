@@ -9,11 +9,7 @@ class DealsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        automaticallyImplyLeading: true,
-        backgroundColor: Colors.grey.shade900,
-      ),
-      backgroundColor: Colors.grey.shade400,
+      backgroundColor: Colors.black,
       body:
           //  SingleChildScrollView(
           //   child:
