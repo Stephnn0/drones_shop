@@ -30,6 +30,7 @@ class _MobileWebsiteLayoutState extends State<MobileWebsiteLayout> {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: Colors.black,
         title: Container(
           height: 100,

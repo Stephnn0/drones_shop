@@ -8,6 +8,7 @@ import 'package:drone_website/features/website/screens/real_state/widgets/realst
 import 'package:drone_website/features/website/screens/home/widgets/scroll_view_body.dart';
 import 'package:drone_website/features/website/widgets/contact_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class GalleryScreen extends StatelessWidget {
   static const String routeName = '/realstate';
@@ -141,10 +142,10 @@ class GalleryScreen extends StatelessWidget {
           Container(
             height: 100,
             color: Colors.grey.shade200,
-            child: const Center(
+            child: Center(
                 child: Text(
               "MIAMI'S LEADING REAL STATE PHOTOGRAPHY STUDIO! ",
-              style: TextStyle(
+              style: GoogleFonts.abel(
                   fontSize: 50,
                   color: Colors.black,
                   fontWeight: FontWeight.bold),
@@ -183,70 +184,70 @@ class GalleryScreen extends StatelessWidget {
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 100, vertical: 20),
-            child: SizedBox(
-              height: 500,
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                children: [
-                  RealStateCart(
-                    text: 'AERIAL DRONE PHOTOGRAPHY & VIDEOS',
-                    image: 'images/casa.jpg',
-                    description:
-                        'High resolution photos from our team of professional photographers',
-                    onTap: () {},
-                  ),
-                  RealStateCart(
-                    text: 'WALK-THROUGH VIDEO PRODUCTIONS',
-                    image: 'images/casa.jpg',
-                    description:
-                        'High resolution photos from our team of professional photographers',
-                    onTap: () {},
-                  ),
-                  RealStateCart(
-                    text: 'COMMERCIAL & BUSINESS VIRTUAL TOURS',
-                    image: 'images/casa.jpg',
-                    description:
-                        'High resolution photos from our team of professional photographers',
-                    onTap: () {},
-                  ),
-                ],
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 100, vertical: 20),
-            child: Container(
-              height: 500,
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                children: [
-                  RealStateCart(
-                    text: 'TWILIGHT PHOTOGRAHY',
-                    image: 'images/casa.jpg',
-                    description:
-                        'High resolution photos from our team of professional photographers',
-                    onTap: () {},
-                  ),
-                  RealStateCart(
-                    text: '2D FLOOR PLANS',
-                    image: 'images/florplan.jpg',
-                    description:
-                        'High resolution photos from our team of professional photographers',
-                    onTap: () {},
-                  ),
-                  RealStateCart(
-                    text: 'VIRTUAL STAGING',
-                    image: 'images/casa.jpg',
-                    description:
-                        'High resolution photos from our team of professional photographers, ',
-                    onTap: () {},
-                  ),
-                ],
-              ),
-            ),
-          ),
+          // Padding(
+          //   padding: const EdgeInsets.symmetric(horizontal: 100, vertical: 20),
+          //   child: SizedBox(
+          //     height: 500,
+          //     child: ListView(
+          //       scrollDirection: Axis.horizontal,
+          //       children: [
+          //         RealStateCart(
+          //           text: 'AERIAL DRONE PHOTOGRAPHY & VIDEOS',
+          //           image: 'images/casa.jpg',
+          //           description:
+          //               'High resolution photos from our team of professional photographers',
+          //           onTap: () {},
+          //         ),
+          //         RealStateCart(
+          //           text: 'WALK-THROUGH VIDEO PRODUCTIONS',
+          //           image: 'images/casa.jpg',
+          //           description:
+          //               'High resolution photos from our team of professional photographers',
+          //           onTap: () {},
+          //         ),
+          //         RealStateCart(
+          //           text: 'COMMERCIAL & BUSINESS VIRTUAL TOURS',
+          //           image: 'images/casa.jpg',
+          //           description:
+          //               'High resolution photos from our team of professional photographers',
+          //           onTap: () {},
+          //         ),
+          //       ],
+          //     ),
+          //   ),
+          // ),
+          // Padding(
+          //   padding: const EdgeInsets.symmetric(horizontal: 100, vertical: 20),
+          //   child: Container(
+          //     height: 500,
+          //     child: ListView(
+          //       scrollDirection: Axis.horizontal,
+          //       children: [
+          //         RealStateCart(
+          //           text: 'TWILIGHT PHOTOGRAHY',
+          //           image: 'images/casa.jpg',
+          //           description:
+          //               'High resolution photos from our team of professional photographers',
+          //           onTap: () {},
+          //         ),
+          //         RealStateCart(
+          //           text: '2D FLOOR PLANS',
+          //           image: 'images/florplan.jpg',
+          //           description:
+          //               'High resolution photos from our team of professional photographers',
+          //           onTap: () {},
+          //         ),
+          //         RealStateCart(
+          //           text: 'VIRTUAL STAGING',
+          //           image: 'images/casa.jpg',
+          //           description:
+          //               'High resolution photos from our team of professional photographers, ',
+          //           onTap: () {},
+          //         ),
+          //       ],
+          //     ),
+          //   ),
+          // ),
           const SizedBox(
             height: 60,
           ),

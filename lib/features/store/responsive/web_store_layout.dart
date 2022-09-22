@@ -1,3 +1,4 @@
+import 'package:drone_website/features/store/screens/homeStore.dart';
 import 'package:drone_website/features/website/screens/home/home_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -43,9 +44,7 @@ class _WebStoreLayoutState extends State<WebStoreLayout> {
           ),
           body: const TabBarView(
             children: [
-              Center(
-                child: Text('hello world'),
-              ),
+              HomeStore(),
               Center(
                 child: Text('hello world'),
               ),

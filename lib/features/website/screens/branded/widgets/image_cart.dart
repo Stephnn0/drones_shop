@@ -12,7 +12,7 @@ class ImageCart extends StatelessWidget {
       padding: const EdgeInsets.all(4.0),
       child: ClipRRect(
         //borderRadius: BorderRadius.circular(16.0),
-        child: Image.network(imageData.imageUrl, fit: BoxFit.cover),
+        child: Image.asset(imageData.imageUrl, fit: BoxFit.cover),
       ),
     );
   }

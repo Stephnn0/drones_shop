@@ -25,6 +25,7 @@ class _WebWebsiteLayoutState extends State<WebWebsiteLayout> {
         length: 5,
         child: Scaffold(
           appBar: AppBar(
+            automaticallyImplyLeading: false,
             centerTitle: true,
             title: Container(
               height: 80,

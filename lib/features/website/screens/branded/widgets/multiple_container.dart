@@ -71,11 +71,11 @@ class MultipleContainer extends StatelessWidget {
             color: color3,
             height: 300,
             child: ListView.builder(
-                itemCount: imageList.length,
+                itemCount: imageList1.length,
                 scrollDirection: Axis.horizontal,
                 itemBuilder: (context, index) {
                   return ImageCart(
-                    imageData: imageList[index],
+                    imageData: imageList1[index],
                   );
                 }),
           ),

@@ -143,7 +143,7 @@ class _HomeWebsiteScreenState extends State<HomeWebsiteScreen> {
               padding: const EdgeInsets.all(8.0),
               child: BioText(
                 text:
-                    'Video marketing has become a vital part of any business sector in the last decade and has become highly popular in real estate. As a result, websites with video content are seeing an increase in search results, which is why their properties are getting sold quickly.',
+                    'Our years of experience has allow us to develop content that is most successful and powerful when it comes to creating stories to tell. By crafting a good narrative we will create  chemistry with your audience, connect with them on a deeper level and create content that sticks in their minds',
                 color: Colors.grey.shade700,
               ),
             ),
@@ -157,8 +157,8 @@ class _HomeWebsiteScreenState extends State<HomeWebsiteScreen> {
               iconcolor: Colors.white,
               icon: Icons.video_collection,
               description:
-                  'When creating branded content we believe it is integral to fully understand your target audience. This involves getting to know the demographics and psychographics of your audience which may include their lifestyle choices, social media preferences and attitudes towards ethical issues. ',
-              title: 'PRODUCTIONS',
+                  'We help you develop closer customer relationships with the intent to evoke emotions with your branded content. You can also provide clear milestones throughout the production to determine if and where your team has to go back and make changes.',
+              title: 'PITAJAYA PRODUCTIONS READY TO ORDER',
               color1: Colors.black,
               color2: Colors.black,
               color3: Colors.black,
@@ -187,98 +187,28 @@ class _HomeWebsiteScreenState extends State<HomeWebsiteScreen> {
             // ),
 
             const CarouselSliderWidget(),
-            const SizedBox(
-              height: 10,
-            ),
+            // const SizedBox(
+            //   height: 10,
+            // ),
             Container(
               height: 30,
               color: Colors.black,
             ),
+            MultipleContainer(
+              titlecolor: Colors.white,
+              iconcolor: Colors.white,
+              icon: Icons.video_collection,
+              description:
+                  'Video marketing has become a vital part of any business sector in the last decade and has become highly popular in real estate. As a result, websites with video content are seeing an increase in search results, which is why their properties are getting sold quickly.',
+              title: 'PRODUCTIONS',
+              color1: Colors.black,
+              color2: Colors.black,
+              color3: Colors.black,
+              colordescription: Colors.grey.shade700,
+            ),
             const SizedBox(
               height: 30,
             ),
-
-            // BioText(
-            //   text:
-            //       'Our years of experience has allow us to develop content that is most successful and powerful when it comes to creating stories to tell. By crafting a good narrative we will create  chemistry with your audience, connect with them on a deeper level and create content that sticks in their minds',
-            //   color: Colors.grey.shade700,
-            // ),
-
-            // Row(
-            //   mainAxisAlignment: MainAxisAlignment.center,
-            //   children: [
-            //     Container(
-            //       height: 160,
-            //       width: 160,
-            //       decoration: BoxDecoration(
-            //           image: DecorationImage(image: AssetImage(images[3]))),
-            //     ),
-            //     Container(
-            //       height: 250,
-            //       width: 250,
-            //       decoration: BoxDecoration(
-            //           image: DecorationImage(image: AssetImage(images[1]))),
-            //     ),
-            //     Container(
-            //       height: 200,
-            //       width: 200,
-            //       decoration: BoxDecoration(
-            //           image: DecorationImage(image: AssetImage(images[2]))),
-            //     ),
-            //   ],
-            // ),
-
-            // FutureBuilder(
-            //     future: _initializeVideoPlayerFuture,
-            //     builder: (context, snapshot) {
-            //       if (snapshot.connectionState == ConnectionState.done) {
-            //         return Padding(
-            //           padding: const EdgeInsets.symmetric(horizontal: 500.0),
-            //           child: AspectRatio(
-            //             aspectRatio: _controller.value.aspectRatio,
-            //             child: VideoPlayer(_controller),
-            //           ),
-            //         );
-            //       } else {
-            //         return const Center(
-            //           child: CircularProgressIndicator(),
-            //         );
-            //       }
-            //     }),
-            // Padding(
-            //   padding: const EdgeInsets.all(16.0),
-            //   child: FloatingActionButton(
-            //       onPressed: () {
-            //         setState(() {
-            //           if (_controller.value.isPlaying) {
-            //             _controller.pause();
-            //           } else {
-            //             _controller.play();
-            //           }
-            //         });
-            //       },
-            //       child: Icon(_controller.value.isPlaying
-            //           ? Icons.pause
-            //           : Icons.play_arrow)),
-            // ),
-            // Container(
-            //   height: 50,
-            //   color: Colors.black,
-            // ),
-            // BioText(
-            //   text:
-            //       'Our years of experience has allow us to develop content that is most successful and powerful when it comes to creating stories to tell. By crafting a good narrative we will create  chemistry with your audience, connect with them on a deeper level and create content that sticks in their minds',
-            //   color: Colors.grey.shade700,
-            // ),
-
-            /////////////////////////////////////////////////
-            // const SizedBox(
-            //   height: 5,
-            // ),
-            // const FeaturesWidget(),
-            // const SizedBox(
-            //   height: 10,
-            // ),
             Container(
               height: 100,
               width: 500,

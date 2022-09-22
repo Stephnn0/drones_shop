@@ -5,13 +5,16 @@ import 'package:drone_website/features/website/screens/branded/widgets/work_expe
 import 'package:drone_website/features/website/screens/footer/features.dart';
 import 'package:drone_website/features/website/screens/footer/footer.dart';
 import 'package:drone_website/features/website/screens/real_state/widgets/image_stack.dart';
+import 'package:drone_website/features/website/screens/real_state/widgets/realstate_cart.dart';
 import 'package:drone_website/features/website/widgets/contact_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class BrandedContent extends StatelessWidget {
   BrandedContent({Key? key}) : super(key: key);
 
   final List<String> images = [
+    'assets/images1/q.jpg',
     'assets/images/res.jpg',
     'assets/images/youtub(1).png',
     'assets/images/isss(1).png',
@@ -82,7 +85,7 @@ class BrandedContent extends StatelessWidget {
               // ),
               ImageStack(
                   image: images[0],
-                  subtitle: " REAL TIME PROJECT PRODUCTIONS",
+                  subtitle: " REAL TIME DRONE PRODUCTIONS",
                   title: "BRANDED CONTENT"),
               ////////////////////////////////////////////////////////////////////////////////////////////////////////
               const SizedBox(
@@ -147,19 +150,72 @@ class BrandedContent extends StatelessWidget {
                 color3: Colors.black,
                 colordescription: Colors.grey.shade700,
               ),
-              /////////////////////////////////////////////////////////////////////////////////////////////////////
-              const MultipleContainer(
-                titlecolor: Colors.black,
-                iconcolor: Colors.black,
-                icon: Icons.video_stable,
-                description:
-                    'We help you develop closer customer relationships with the intent to evoke emotions with your branded content. You can also provide clear milestones throughout the production to determine if and where your team has to go back and make changes.',
-                title: 'AERIAL SERVICES',
-                color1: Colors.white,
-                color2: Colors.white,
-                color3: Colors.white,
-                colordescription: Colors.white,
+              const SizedBox(
+                height: 10,
               ),
+              Container(
+                height: 100,
+                width: 1400,
+                decoration: BoxDecoration(
+                    color: Colors.black,
+                    border: Border.all(color: Colors.white),
+                    borderRadius: BorderRadius.circular(40)),
+                child: Center(
+                    child: Text(
+                  "MIAMI'S LEADING REAL STATE PHOTOGRAPHY STUDIO! ",
+                  style: GoogleFonts.abel(
+                      fontSize: 50,
+                      color: Colors.grey.shade500,
+                      fontWeight: FontWeight.bold),
+                )),
+              ),
+              Padding(
+                //
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 100, vertical: 20),
+                child: SizedBox(
+                  height: 500,
+                  child: ListView(
+                    scrollDirection: Axis.horizontal,
+                    children: [
+                      RealStateCart(
+                        text: 'REAL ESTATE PHOTOGRAPHY MIAMI',
+                        image: 'images/casa.jpg',
+                        description:
+                            'High resolution photos from our team of professional photographers',
+                        onTap: () {},
+                      ),
+                      RealStateCart(
+                        text: 'SINGLE PROPERTY SITE',
+                        image: 'images/cassa.jpg',
+                        description:
+                            'High resolution photos from our team of professional photographers',
+                        onTap: () {},
+                      ),
+                      RealStateCart(
+                        text: '3D TOURS/MATTERPORT MIAMI',
+                        image: 'images/3dt.jpg',
+                        description:
+                            'High resolution photos from our team of professional photographers',
+                        onTap: () {},
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              /////////////////////////////////////////////////////////////////////////////////////////////////////
+              // const MultipleContainer(
+              //   titlecolor: Colors.black,
+              //   iconcolor: Colors.black,
+              //   icon: Icons.video_stable,
+              //   description:
+              //       'We help you develop closer customer relationships with the intent to evoke emotions with your branded content. You can also provide clear milestones throughout the production to determine if and where your team has to go back and make changes.',
+              //   title: 'AERIAL SERVICES',
+              //   color1: Colors.white,
+              //   color2: Colors.white,
+              //   color3: Colors.white,
+              //   colordescription: Colors.white,
+              // ),
               /////////////////////////////////////////////////////////////////////////////////////////////////////
               const SizedBox(
                 height: 20,
@@ -176,7 +232,7 @@ class BrandedContent extends StatelessWidget {
                 height: 190,
                 width: 190,
                 decoration: BoxDecoration(
-                    image: DecorationImage(image: AssetImage(images[4]))),
+                    image: DecorationImage(image: AssetImage(images[5]))),
               ),
               const Text(
                 'SPACES CAPTURED',

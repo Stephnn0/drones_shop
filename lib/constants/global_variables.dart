@@ -1,8 +1,13 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 String uri = 'http://10.0.0.186:3000'; //192.168.1.237
 
 const webScreenSize = 750; //700
+
+var firebaseAuth = FirebaseAuth.instance;
+var firestore = FirebaseFirestore.instance;
 
 class GlobalVariables {
   static const appBarGradient = LinearGradient(

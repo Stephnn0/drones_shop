@@ -5,6 +5,7 @@ import 'package:drone_website/features/website/screens/real_state/widgets/image_
 import 'package:drone_website/features/website/screens/real_state/widgets/realstate_cart.dart';
 import 'package:drone_website/features/website/widgets/contact_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class EnterpriseScreen extends StatelessWidget {
   EnterpriseScreen({Key? key}) : super(key: key);
@@ -67,7 +68,7 @@ class EnterpriseScreen extends StatelessWidget {
           const SizedBox(
             height: 10,
           ),
-          const MultipleContainer(
+          MultipleContainer(
             titlecolor: Colors.white,
             iconcolor: Colors.white,
             icon: Icons.subscriptions_outlined,
@@ -77,7 +78,7 @@ class EnterpriseScreen extends StatelessWidget {
             color1: Colors.black,
             color2: Colors.black,
             color3: Colors.black,
-            colordescription: Colors.white,
+            colordescription: Colors.grey.shade500,
           ),
 
           const SizedBox(
@@ -87,14 +88,15 @@ class EnterpriseScreen extends StatelessWidget {
             height: 100,
             width: 1400,
             decoration: BoxDecoration(
-                color: Colors.grey.shade200,
+                color: Colors.black,
+                border: Border.all(color: Colors.white),
                 borderRadius: BorderRadius.circular(40)),
-            child: const Center(
+            child: Center(
                 child: Text(
               "MIAMI'S LEADING REAL STATE PHOTOGRAPHY STUDIO! ",
-              style: TextStyle(
+              style: GoogleFonts.abel(
                   fontSize: 50,
-                  color: Colors.black,
+                  color: Colors.grey.shade500,
                   fontWeight: FontWeight.bold),
             )),
           ),

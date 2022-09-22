@@ -1,84 +1,33 @@
-import 'dart:convert';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
-class User {
-  final String id;
-  final String name;
+class UserProfile {
   final String email;
-  final String password;
-  final String address;
+  final String uid;
   final String type;
-  final String token;
-  //cart
-  //final List<dynamic> cart;
 
-  User({
-    required this.id,
-    required this.name,
+  UserProfile({
     required this.email,
-    required this.password,
-    required this.address,
+    required this.uid,
     required this.type,
-    required this.token,
-    //required this.cart
   });
 
-  Map<String, dynamic> toMap() {
-    return {
-      'id': id,
-      'name': name,
-      'email': email,
-      'password': password,
-      'address': address,
-      'type': type,
-      'token': token,
-      //'cart': cart,
-    };
-  }
+  //methods
+  //this method converts everthing to object file to we dont have to write everthing again
+  // method to convert a doc snapshot to user model (this is used for get user details in ui)
 
-  factory User.fromMap(Map<String, dynamic> map) {
-    return User(
-      id: map['_id'] ?? '',
-      name: map['name'] ?? '',
-      email: map['email'] ?? '',
-      password: map['password'] ?? '',
-      address: map['address'] ?? '',
-      type: map['type'] ?? '',
-      token: map['token'] ?? '',
-      // cart: List<Map<String, dynamic>>.from(
-      //   map['cart']?.map(
-      //     (x) => Map<String, dynamic>.from(x),
-      //   ),
-      // ),
+  static UserProfile fromSnap(DocumentSnapshot snap) {
+    var snapshot = snap.data() as Map<String, dynamic>;
+
+    return UserProfile(
+      email: snapshot['email'],
+      uid: snapshot['uid'],
+      type: snapshot['type'],
     );
   }
 
-  String toJson() => json.encode(toMap());
-
-  factory User.fromJson(String source) => User.fromMap(json.decode(source));
-
-/////////////////////////////////////////////////////////////////////////////////// for cart
-  User copyWith({
-    String? id,
-    String? name,
-    String? email,
-    String? password,
-    String? address,
-    String? type,
-    String? token,
-    // List<dynamic>? cart,
-  }) {
-    return User(
-      id: id ?? this.id,
-      name: name ?? this.name,
-      email: email ?? this.email,
-      password: password ?? this.password,
-      address: address ?? this.address,
-      type: type ?? this.type,
-      token: token ?? this.token,
-      // cart: cart ?? this.cart,
-    );
-  }
-
-  ///////////////////////////////////////////////////////////////////////////////////////
-
+  Map<String, dynamic> toJson() => {
+        "email": email,
+        "uid": uid,
+        "type": type,
+      };
 }

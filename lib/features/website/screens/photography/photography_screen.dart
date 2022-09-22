@@ -8,6 +8,7 @@ import 'package:drone_website/features/website/screens/home/widgets/scroll_view_
 import 'package:drone_website/features/website/screens/photography/widgets/duo_square.dart';
 import 'package:drone_website/features/website/widgets/contact_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:video_player/video_player.dart';
 
 class PhotographyScreen extends StatefulWidget {
@@ -24,9 +25,9 @@ class _PhotographyScreenState extends State<PhotographyScreen> {
     'assets/images/isss(1).png',
   ];
 
-  final List<String> video = [
-    'assets/images/video.mp4',
-  ];
+  // final List<String> video = [
+  //   'assets/images/video.mp4',
+  // ];
 
   final List<String> video1 = [
     'assets/images/video2.mp4',
@@ -40,7 +41,9 @@ class _PhotographyScreenState extends State<PhotographyScreen> {
 
   @override
   void initState() {
-    _controller = VideoPlayerController.asset(video[0]);
+    _controller = VideoPlayerController.network(
+        'https://firebasestorage.googleapis.com/v0/b/pitajaya-drones-studio.appspot.com/o/REEL%20PITAJAYA%20DRONES%202020.mp4?alt=media&token=9311928f-5cd7-40f5-b17a-c99adf5cdf45');
+    // _controller = VideoPlayerController.asset(video[0]);
     _initializeVideoPlayerFuture = _controller.initialize();
     _controller.setLooping(true);
     _controller.setVolume(1.0);
@@ -63,6 +66,7 @@ class _PhotographyScreenState extends State<PhotographyScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+            centerTitle: false,
             backgroundColor: Colors.black,
             leading: Padding(
               padding: const EdgeInsets.all(8.0),
@@ -73,48 +77,61 @@ class _PhotographyScreenState extends State<PhotographyScreen> {
                     image: DecorationImage(image: AssetImage(images[0]))),
               ),
             ),
-            title: Container(
-              height: 25,
-              decoration: BoxDecoration(
-                // color: Colors.grey.shade300,
-                color: Colors.white,
-                // Colors.grey.shade300,
-
-                borderRadius: BorderRadius.circular(5),
-              ),
-              child: AnimatedTextKit(
-                  totalRepeatCount: 1,
-                  repeatForever: false,
-                  animatedTexts: [
-                    TypewriterAnimatedText(
-                        '         GET IN TOUCH           SOCIAL MEDIA OR CONTACT INFORMATION               786 315 7771                PITAJAYADRONES@GMAIL.COM                  MIAMI | ECUADOR         ',
-                        textStyle: const TextStyle(
-                            color: Colors.black,
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold)),
-                  ]),
+            title: Text(
+              '/ Pitajaya_Drones   ',
+              style: GoogleFonts.abel(fontSize: 20),
             ),
+            // title: Container(
+            //   height: 25,
+            //   decoration: BoxDecoration(
+            //     // color: Colors.grey.shade300,
+            //     color: Colors.white,
+            //     // Colors.grey.shade300,
+
+            //     borderRadius: BorderRadius.circular(5),
+            //   ),
+            //   child: AnimatedTextKit(
+            //       totalRepeatCount: 1,
+            //       repeatForever: false,
+            //       animatedTexts: [
+            //         TypewriterAnimatedText(
+            //             '         GET IN TOUCH           SOCIAL MEDIA OR CONTACT INFORMATION               786 315 7771                PITAJAYADRONES@GMAIL.COM                  MIAMI | ECUADOR         ',
+            //             textStyle: const TextStyle(
+            //                 color: Colors.black,
+            //                 fontSize: 20,
+            //                 fontWeight: FontWeight.bold)),
+            //       ]),
+            // ),
             actions: [
-              Container(
-                height: 50,
-                width: 50,
-                decoration: BoxDecoration(
-                    image: DecorationImage(image: AssetImage(images[2]))),
+              Row(
+                children: [
+                  Text(
+                    '@pitajaya_drones /  ',
+                    style: GoogleFonts.abel(fontSize: 20),
+                  ),
+                  Container(
+                    height: 40,
+                    width: 40,
+                    decoration: BoxDecoration(
+                        image: DecorationImage(image: AssetImage(images[2]))),
+                  ),
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  const Icon(
+                    Icons.shopping_cart,
+                    size: 35,
+                  ),
+                  const SizedBox(
+                    width: 10,
+                  ),
+                ],
               ),
             ]),
         backgroundColor: Colors.black,
         body: SingleChildScrollView(
           child: Column(
             children: [
-              ////////////////////////////////////////////////////////////////////////////////////////////////////////
-              // Center(
-              //   child: SizedBox(
-              //       width: double.infinity,
-              //       child: Image(
-              //           fit: BoxFit.cover,
-              //           image: AssetImage('images/panecillo.jpg'))),
-              // ),
-
               FutureBuilder(
                   future: _initializeVideoPlayerFuture,
                   builder: (context, snapshot) {
@@ -124,7 +141,7 @@ class _PhotographyScreenState extends State<PhotographyScreen> {
                         child: VideoPlayer(_controller),
                       );
                     } else {
-                      return Center(
+                      return const Center(
                         child: CircularProgressIndicator(),
                       );
                     }
@@ -223,13 +240,26 @@ class _PhotographyScreenState extends State<PhotographyScreen> {
                 height: 50,
                 color: Colors.black,
               ),
-              Container(
-                height: 5,
-                color: Colors.grey.shade500,
+              // Container(
+              //   height: 5,
+              //   color: Colors.grey.shade500,
+              // ),
+              MultipleContainer(
+                titlecolor: Colors.white,
+                iconcolor: Colors.white,
+                icon: Icons.video_collection,
+                description:
+                    'When creating branded content we believe it is integral to fully understand your target audience. This involves getting to know the demographics and psychographics of your audience which may include their lifestyle choices, social media preferences and attitudes towards ethical issues. ',
+                title: 'PRODUCTIONS',
+                color1: Colors.black,
+                color2: Colors.black,
+                color3: Colors.black,
+                colordescription: Colors.grey.shade700,
               ),
               const SizedBox(
                 height: 30,
               ),
+
               Container(
                 height: 100,
                 width: 500,

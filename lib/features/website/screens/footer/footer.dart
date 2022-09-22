@@ -1,3 +1,4 @@
+import 'package:drone_website/features/auth/auth_screen.dart';
 import 'package:flutter/material.dart';
 
 class FooterWidget extends StatelessWidget {
@@ -237,10 +238,15 @@ class FooterWidget extends StatelessWidget {
               height: 50,
             ),
             Row(
-              children: const [
-                Icon(
-                  Icons.camera_alt_outlined,
-                  color: Colors.white,
+              children: [
+                InkWell(
+                  onTap: () {
+                    Navigator.pushNamed(context, AuthScreen.routeName);
+                  },
+                  child: Icon(
+                    Icons.camera_alt_outlined,
+                    color: Colors.white,
+                  ),
                 ),
                 SizedBox(
                   width: 20,
