@@ -4,7 +4,9 @@ import 'package:drone_website/features/website/screens/branded/widgets/multiple_
 import 'package:drone_website/features/website/screens/footer/features.dart';
 import 'package:drone_website/features/website/screens/footer/footer.dart';
 import 'package:drone_website/features/website/screens/footer/widgets/carousel_slider.dart';
+import 'package:drone_website/features/website/screens/real_state/widgets/image_stack.dart';
 import 'package:drone_website/features/website/widgets/contact_widget.dart';
+import 'package:drone_website/features/website/widgets/image2_stock.dart';
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -26,29 +28,30 @@ class _HomeWebsiteScreenState extends State<HomeWebsiteScreen> {
     'assets/images/redbull.jpg',
     'assets/images/net.jpeg',
     'assets/images/vegeta(2).png',
+    'assets/images1/q.jpg',
   ];
 
-  // final List<String> video = [
-  //   'assets/images/video2.mp4',
-  // ];
+  final List<String> video = [
+    'assets/images/video2.mp4',
+  ];
 
-  // late VideoPlayerController _controller;
+  late VideoPlayerController _controller;
 
-  // late Future<void> _initializeVideoPlayerFuture;
-  // @override
-  // void initState() {
-  //   _controller = VideoPlayerController.asset(video[0]);
-  //   _initializeVideoPlayerFuture = _controller.initialize();
-  //   _controller.setLooping(true);
-  //   _controller.setVolume(1.0);
-  //   super.initState();
-  // }
+  late Future<void> _initializeVideoPlayerFuture;
+  @override
+  void initState() {
+    _controller = VideoPlayerController.asset(video[0]);
+    _initializeVideoPlayerFuture = _controller.initialize();
+    _controller.setLooping(true);
+    _controller.setVolume(1.0);
+    super.initState();
+  }
 
-  // @override
-  // void dispose() {
-  //   _controller.dispose();
-  //   super.dispose();
-  // }
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -119,11 +122,21 @@ class _HomeWebsiteScreenState extends State<HomeWebsiteScreen> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Stack(children: [
-              Center(
-                child: Image(image: AssetImage(images[0])),
-              ),
-            ]),
+            ImageStack(
+                image: images[5],
+                subtitle: "VIDEO SERVICES",
+                title: "PITAJAYA DRONE STUDIOS"),
+            Image2Stack(
+                image: images[0],
+                subtitle: " REAL TIME DRONE PRODUCTIONS",
+                title: "BRANDED CONTENT"),
+
+            // Stack(children: [
+            //   Center(
+            //     child: Image(image: AssetImage(images[0])),
+            //   ),
+            // ]),
+            //////////////////////////
             // const SizedBox(
             //   height: 60,
             // ),
@@ -170,42 +183,31 @@ class _HomeWebsiteScreenState extends State<HomeWebsiteScreen> {
               height: 50,
               color: Colors.black,
             ),
-            // BioText(
-            //   text:
-            //       'Our years of experience has allow us to develop content that is most successful and powerful when it comes to creating stories to tell. By crafting a good narrative we will create  chemistry with your audience, connect with them on a deeper level and create content that sticks in their minds',
-            //   color: Colors.grey.shade700,
-            // ),
-            const CarouselSliderWidget(),
-            Container(
-              height: 50,
-              color: Colors.black,
-            ),
-            // BioText(
-            //   text:
-            //       'Our years of experience has allow us to develop content that is most successful and powerful when it comes to creating stories to tell. By crafting a good narrative we will create  chemistry with your audience, connect with them on a deeper level and create content that sticks in their minds',
-            //   color: Colors.grey.shade700,
+
+            // const CarouselSliderWidget(),
+            // Container(
+            //   height: 50,
+            //   color: Colors.black,
             // ),
 
-            const CarouselSliderWidget(),
-            // const SizedBox(
-            //   height: 10,
-            // ),
+            // const CarouselSliderWidget(),
+
             Container(
               height: 30,
               color: Colors.black,
             ),
-            MultipleContainer(
-              titlecolor: Colors.white,
-              iconcolor: Colors.white,
-              icon: Icons.video_collection,
-              description:
-                  'Video marketing has become a vital part of any business sector in the last decade and has become highly popular in real estate. As a result, websites with video content are seeing an increase in search results, which is why their properties are getting sold quickly.',
-              title: 'PRODUCTIONS',
-              color1: Colors.black,
-              color2: Colors.black,
-              color3: Colors.black,
-              colordescription: Colors.grey.shade700,
-            ),
+            // MultipleContainer(
+            //   titlecolor: Colors.white,
+            //   iconcolor: Colors.white,
+            //   icon: Icons.video_collection,
+            //   description:
+            //       'Video marketing has become a vital part of any business sector in the last decade and has become highly popular in real estate. As a result, websites with video content are seeing an increase in search results, which is why their properties are getting sold quickly.',
+            //   title: 'PRODUCTIONS',
+            //   color1: Colors.black,
+            //   color2: Colors.black,
+            //   color3: Colors.black,
+            //   colordescription: Colors.grey.shade700,
+            // ),
             const SizedBox(
               height: 30,
             ),
@@ -225,6 +227,43 @@ class _HomeWebsiteScreenState extends State<HomeWebsiteScreen> {
                     fontWeight: FontWeight.bold),
               )),
             ),
+            ////////////////////
+            // const SizedBox(
+            //   height: 30,
+            // ),
+            // FutureBuilder(
+            //     future: _initializeVideoPlayerFuture,
+            //     builder: (context, snapshot) {
+            //       if (snapshot.connectionState == ConnectionState.done) {
+            //         return Padding(
+            //           padding: const EdgeInsets.symmetric(horizontal: 500.0),
+            //           child: AspectRatio(
+            //             aspectRatio: _controller.value.aspectRatio,
+            //             child: VideoPlayer(_controller),
+            //           ),
+            //         );
+            //       } else {
+            //         return const Center(
+            //           child: CircularProgressIndicator(),
+            //         );
+            //       }
+            //     }),
+            // Padding(
+            //   padding: const EdgeInsets.all(16.0),
+            //   child: FloatingActionButton(
+            //       onPressed: () {
+            //         setState(() {
+            //           if (_controller.value.isPlaying) {
+            //             _controller.pause();
+            //           } else {
+            //             _controller.play();
+            //           }
+            //         });
+            //       },
+            //       child: Icon(_controller.value.isPlaying
+            //           ? Icons.pause
+            //           : Icons.play_arrow)),
+            // ),
             const SizedBox(
               height: 60,
             ),

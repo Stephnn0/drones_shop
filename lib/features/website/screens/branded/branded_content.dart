@@ -84,7 +84,7 @@ class BrandedContent extends StatelessWidget {
               //           image: AssetImage('images/res.jpg'))),
               // ),
               ImageStack(
-                  image: images[0],
+                  image: images[1],
                   subtitle: " REAL TIME DRONE PRODUCTIONS",
                   title: "BRANDED CONTENT"),
               ////////////////////////////////////////////////////////////////////////////////////////////////////////
