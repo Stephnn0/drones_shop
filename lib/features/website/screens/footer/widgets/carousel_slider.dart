@@ -18,12 +18,7 @@ class _CarouselSliderWidgetState extends State<CarouselSliderWidget> {
     'assets/images/lui.jpg',
   ];
 
-  final List<String> sentences = [
-    'Barcelona',
-    'Real Madrid',
-    'Manchester United',
-    'Inter de Milan'
-  ];
+  final List<String> sentences = ['', '', '', ''];
 
   List<Widget> generateImagesTiles() {
     return images

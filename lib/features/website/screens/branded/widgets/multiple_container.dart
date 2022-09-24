@@ -1,6 +1,7 @@
 import 'package:drone_website/features/website/screens/branded/data/image_data.dart';
 import 'package:drone_website/features/website/screens/branded/widgets/image_cart.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class MultipleContainer extends StatelessWidget {
   final Color color1;
@@ -45,8 +46,8 @@ class MultipleContainer extends StatelessWidget {
           Center(
             child: Text(
               title,
-              style: TextStyle(
-                  fontSize: 50, fontWeight: FontWeight.w100, color: titlecolor),
+              style: GoogleFonts.abel(
+                  fontSize: 70, fontWeight: FontWeight.w100, color: titlecolor),
             ),
           ),
           const SizedBox(

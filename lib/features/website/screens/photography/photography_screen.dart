@@ -1,11 +1,8 @@
-import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:drone_website/features/website/screens/branded/widgets/bio_text.dart';
 import 'package:drone_website/features/website/screens/branded/widgets/multiple_container.dart';
-import 'package:drone_website/features/website/screens/footer/features.dart';
 import 'package:drone_website/features/website/screens/footer/footer.dart';
 import 'package:drone_website/features/website/screens/footer/widgets/carousel_slider.dart';
-import 'package:drone_website/features/website/screens/home/widgets/scroll_view_body.dart';
-import 'package:drone_website/features/website/screens/photography/widgets/duo_square.dart';
+import 'package:drone_website/features/website/screens/real_state/widgets/realstate_cart.dart';
 import 'package:drone_website/features/website/widgets/contact_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -81,27 +78,6 @@ class _PhotographyScreenState extends State<PhotographyScreen> {
               '/ Pitajaya_Drones   ',
               style: GoogleFonts.abel(fontSize: 20),
             ),
-            // title: Container(
-            //   height: 25,
-            //   decoration: BoxDecoration(
-            //     // color: Colors.grey.shade300,
-            //     color: Colors.white,
-            //     // Colors.grey.shade300,
-
-            //     borderRadius: BorderRadius.circular(5),
-            //   ),
-            //   child: AnimatedTextKit(
-            //       totalRepeatCount: 1,
-            //       repeatForever: false,
-            //       animatedTexts: [
-            //         TypewriterAnimatedText(
-            //             '         GET IN TOUCH           SOCIAL MEDIA OR CONTACT INFORMATION               786 315 7771                PITAJAYADRONES@GMAIL.COM                  MIAMI | ECUADOR         ',
-            //             textStyle: const TextStyle(
-            //                 color: Colors.black,
-            //                 fontSize: 20,
-            //                 fontWeight: FontWeight.bold)),
-            //       ]),
-            // ),
             actions: [
               Row(
                 children: [
@@ -170,20 +146,6 @@ class _PhotographyScreenState extends State<PhotographyScreen> {
                 height: 10,
               ),
 
-              // Container(
-              //   height: 1030,
-              //   child: ListView.builder(
-              //       itemCount: 1,
-              //       scrollDirection: Axis.horizontal,
-              //       itemBuilder: (context, index) {
-              //         return const DuoSquare();
-              //       }),
-              // ),
-              // BioText(
-              //   text:
-              //       'Produce high-quality content with the state-of-the-art equipment with our high-tech drone team. Our talented production studio are always at the ready with a full inventory of professional-grade equipment. We are ready to help out develop, produce and have a massive impact in any type of industry ',
-              //   color: Colors.grey.shade700,
-              // ),
               //////////////////////////////////////////////////////////////////////////////////////////////////////
               MultipleContainer(
                 titlecolor: Colors.white,
@@ -197,53 +159,6 @@ class _PhotographyScreenState extends State<PhotographyScreen> {
                 color3: Colors.black,
                 colordescription: Colors.grey.shade700,
               ),
-
-              const CarouselSliderWidget(),
-              Container(
-                height: 50,
-                color: Colors.black,
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-              // BioText(
-              //   text:
-              //       'Produce high-quality content with the state-of-the-art equipment with our high-tech drone team. Our talented production studio are always at the ready with a full inventory of professional-grade equipment. We are ready to help out develop, produce and have a massive impact in any type of industry ',
-              //   color: Colors.grey.shade700,
-              // ),
-              // const SizedBox(
-              //   height: 10,
-              // ),
-
-              // Container(
-              //   height: 1030,
-              //   child: ListView.builder(
-              //       itemCount: 1,
-              //       scrollDirection: Axis.horizontal,
-              //       itemBuilder: (context, index) {
-              //         return const DuoSquare();
-              //       }),
-              // ),
-              // BioText(
-              //   text:
-              //       'Produce high-quality content with the state-of-the-art equipment with our high-tech drone team. Our talented production studio are always at the ready with a full inventory of professional-grade equipment. We are ready to help out develop, produce and have a massive impact in any type of industry ',
-              //   color: Colors.grey.shade700,
-              // ),
-
-              const CarouselSliderWidget(),
-              Container(
-                height: 50,
-                color: Colors.black,
-              ),
-              const CarouselSliderWidget(),
-              Container(
-                height: 50,
-                color: Colors.black,
-              ),
-              // Container(
-              //   height: 5,
-              //   color: Colors.grey.shade500,
-              // ),
               MultipleContainer(
                 titlecolor: Colors.white,
                 iconcolor: Colors.white,
@@ -260,6 +175,101 @@ class _PhotographyScreenState extends State<PhotographyScreen> {
                 height: 30,
               ),
 
+              const CarouselSliderWidget(),
+              Container(
+                height: 50,
+                color: Colors.black,
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+
+              // const CarouselSliderWidget(),
+              // Container(
+              //   height: 50,
+              //   color: Colors.black,
+              // ),
+              // const CarouselSliderWidget(),
+              // Container(
+              //   height: 50,
+              //   color: Colors.black,
+              // ),
+
+              // MultipleContainer(
+              //   titlecolor: Colors.white,
+              //   iconcolor: Colors.white,
+              //   icon: Icons.video_collection,
+              //   description:
+              //       'When creating branded content we believe it is integral to fully understand your target audience. This involves getting to know the demographics and psychographics of your audience which may include their lifestyle choices, social media preferences and attitudes towards ethical issues. ',
+              //   title: 'PRODUCTIONS',
+              //   color1: Colors.black,
+              //   color2: Colors.black,
+              //   color3: Colors.black,
+              //   colordescription: Colors.grey.shade700,
+              // ),
+              const SizedBox(
+                height: 30,
+              ),
+              /////////////////////////////////////////////////////////////////////////////////////
+
+              const SizedBox(
+                height: 10,
+              ),
+              Container(
+                height: 100,
+                width: 1400,
+                decoration: BoxDecoration(
+                    color: Colors.black,
+                    border: Border.all(color: Colors.white),
+                    borderRadius: BorderRadius.circular(40)),
+                child: Center(
+                    child: Text(
+                  "MIAMI'S LEADING REAL STATE PHOTOGRAPHY STUDIO! ",
+                  style: GoogleFonts.abel(
+                      fontSize: 50,
+                      color: Colors.grey.shade500,
+                      fontWeight: FontWeight.bold),
+                )),
+              ),
+              Padding(
+                //
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 100, vertical: 20),
+                child: SizedBox(
+                  height: 500,
+                  child: ListView(
+                    scrollDirection: Axis.horizontal,
+                    children: [
+                      RealStateCart(
+                        text: 'REAL ESTATE PHOTOGRAPHY MIAMI',
+                        image: 'images/casa.jpg',
+                        description:
+                            'High resolution photos from our team of professional photographers',
+                        onTap: () {},
+                      ),
+                      RealStateCart(
+                        text: 'SINGLE PROPERTY SITE',
+                        image: 'images/cassa.jpg',
+                        description:
+                            'High resolution photos from our team of professional photographers',
+                        onTap: () {},
+                      ),
+                      RealStateCart(
+                        text: '3D TOURS/MATTERPORT MIAMI',
+                        image: 'images/3dt.jpg',
+                        description:
+                            'High resolution photos from our team of professional photographers',
+                        onTap: () {},
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              /////////////////////////////////////////////////////////////
+              Container(
+                height: 50,
+                color: Colors.black,
+              ),
               Container(
                 height: 100,
                 width: 500,
@@ -279,11 +289,7 @@ class _PhotographyScreenState extends State<PhotographyScreen> {
               const SizedBox(
                 height: 30,
               ),
-              // BioText(
-              //   text:
-              //       'Produce high-quality content with the state-of-the-art equipment with our high-tech drone team.',
-              //   color: Colors.grey.shade700,
-              // ),
+
               const SizedBox(
                 height: 30,
               ),
@@ -320,49 +326,17 @@ class _PhotographyScreenState extends State<PhotographyScreen> {
                         ? Icons.pause
                         : Icons.play_arrow)),
               ),
-              // Container(
-              //   height: 50,
-              //   color: Colors.black,
-              // ),
 
-              // Container(
-              //   height: 100,
-              //   width: 500,
-              //   decoration: BoxDecoration(
-              //       color: Colors.black,
-              //       border: Border.all(color: Colors.white),
-              //       borderRadius: BorderRadius.circular(40)),
-              //   child: Center(
-              //       child: Text(
-              //     "CONTACT US! ",
-              //     style: TextStyle(
-              //         fontSize: 60,
-              //         color: Colors.grey.shade400,
-              //         fontWeight: FontWeight.bold),
-              //   )),
-              // ),
-              const SizedBox(
-                height: 60,
+              Container(
+                height: 50,
+                color: Colors.black,
               ),
 
               const ContactWidget(),
               const SizedBox(
                 height: 50,
               ),
-              // Container(
-              //   height: 60,
-              //   color: Colors.white,
-              //   child: const Center(
-              //       child: Text(
-              //     "@PITAJAYA_DRONES",
-              //     style: TextStyle(
-              //       fontSize: 50,
-              //       color: Colors.black,
-              //     ),
-              //   )),
-              // ),
-              //const ScrollViewBody(),
-              // const FeaturesWidget(),
+
               Container(
                 height: 5,
                 color: Colors.grey.shade500,

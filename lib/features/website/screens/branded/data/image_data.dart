@@ -52,18 +52,18 @@ const imageList1 = [
   ),
   ImageData(
     id: 'id-002',
-    imageUrl: 'assets/images/lui.jpg',
+    imageUrl: 'assets/images1/m.jpg',
   ),
   ImageData(
     id: 'id-003',
-    imageUrl: 'assets/images/casa.jpg',
+    imageUrl: 'assets/images1/s.jpg',
   ),
   ImageData(
     id: 'id-004',
-    imageUrl: 'assets/images1/f.jpg',
+    imageUrl: 'assets/images1/aa.jpg',
   ),
   ImageData(
     id: 'id-005',
-    imageUrl: 'assets/images1/q.jpg',
+    imageUrl: 'assets/images1/cc.jpg',
   ),
 ];
